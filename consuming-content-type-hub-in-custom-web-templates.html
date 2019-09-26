@@ -1,0 +1,238 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+        <title>Sanjay Bhagia&#x27;s Blog - Consuming Content Type Hub in custom web templates</title>
+        <meta name="description" content="Sanjay Bhagia" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link type="application/rss+xml" rel="alternate" title="Sanjay Bhagia&#x27;s Blog" href="/rss.xml" />
+                <link type="application/atom+xml" rel="alternate" title="Sanjay Bhagia&#x27;s Blog" href="/feed.xml" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/clean-blog.css" rel="stylesheet" />
+        <link href="/assets/css/master.css" rel="stylesheet" />
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/assets/css/override.css" rel="stylesheet" />
+
+
+        <meta name="application-name" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta name="msapplication-tooltip" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta name="msapplication-starturl" content="/" />
+
+        <meta property="og:site_name" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta property="og:title" content="Consuming Content Type Hub in custom web templates" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://sanjaybhagia.com/2013/03/consuming-content-type-hub-in-custom-web-templates" />
+                        <meta property="og:description" content="style=&quot;text-align: justify;&quot;&gt;Setting up content type hub in SharePoint 2010 is quite straightforward process. There are simple steps to follow and if followed in correct order you can get it working in no time. Content Type Hub relies on managed metadata service. Unless all web applications are sharing the same instance of managed metadata service application, they should be able to consume content types from the content type hub (a site collection marked as a hub and other web application are marked to consume from this location)." />
+
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/highlight.pack.js"></script>
+        <script src="/assets/js/clean-blog.js"></script>
+        <script src="/assets/js/d3.v3.min.js"></script>
+        <script src="/assets/js/trianglify.min.js"></script>
+        <script src="/assets/js/please-compressed.js"></script>
+        <!-- <script src="/assets/js/background-check.min.js"></script> -->
+                
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                <script src="/assets/js/html5shiv.js"></script>
+                <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->
+        
+        
+
+
+        </head>
+        <body>
+                
+                <!-- Navigation -->
+                <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+                        <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header page-scroll">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="/">Sanjay Bhagia&#x27;s Blog</a>
+                                </div>
+                        
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse">
+                                        <ul class="nav navbar-nav navbar-right">
+                                                <li><a href="/about">About Me</a></li>
+<li><a href="/posts">Archive</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/tools">Tools</a></li> 
+                                        </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                </nav>
+                
+                <!-- Page Header -->
+                <header class="intro-header" id="intro-header">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-12">
+
+    
+<div class="post-heading">
+    <h1>Consuming Content Type Hub in custom web templates</h1>
+    <div class="meta">        
+Published on Thursday, 21 March 2013<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/consuming-content-type" class="btn btn-default btn-xs">Consuming Content Type</a>
+                    <a role="button" href="/tags/content-type-hub" class="btn btn-default btn-xs">Content Type Hub</a>
+                    <a role="button" href="/tags/cotnent-type-publishing" class="btn btn-default btn-xs">Cotnent type publishing</a>
+                    <a role="button" href="/tags/enable-feature" class="btn btn-default btn-xs">Enable Feature</a>
+                    <a role="button" href="/tags/managed-matadata-service" class="btn btn-default btn-xs">Managed Matadata Service</a>
+                    <a role="button" href="/tags/onet" class="btn btn-default btn-xs">onet</a>
+                    <a role="button" href="/tags/taxonomyfieldadded" class="btn btn-default btn-xs">TaxonomyFieldAdded</a>
+                    <a role="button" href="/tags/term-store-management" class="btn btn-default btn-xs">Term store management</a>
+                    <a role="button" href="/tags/web-templates" class="btn btn-default btn-xs">Web Templates</a>
+        </div>     
+</div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+                
+                <!-- Main Content -->
+                <div class="container">
+                        <div class="row">
+                                <div id="content" class="col-md-12">
+                                        
+
+<p style="text-align: justify;">Setting up content type hub in SharePoint 2010 is quite straightforward process. There are simple steps to follow and if followed in correct order you can get it working in no time. Content Type Hub relies on managed metadata service. Unless all web applications are sharing the same instance of managed metadata service application, they should be able to consume content types from the content type hub (a site collection marked as a hub and other web application are marked to consume from this location).</p>
+<p style="text-align: justify;">However, if you are doing the customization and you have some custom Web Templates that you use to create sites and subsites. And in those sites, you want to consume content types from content type hub, you might get a little bump in the road during the setup.</p>
+<p style="text-align: justify;">As I mentioned, Content Type Hub relies on Managed Matadata service, one feature TaxonomyFieldAdded (a hidden) feature is enabled on every site collection by default. This feature is not activated by default when you create web templates (please refer to this blog for further explanation of this: <a href="http://blogs.msdn.com/b/chaks/archive/2011/09/04/web-templates-and-content-type-publishing.aspx">Web Templates and Content Type Publishing</a>). So if you navigate to the Site Settings for any site that is created from custom web template, you will not see any link for Term store management or Content Type Publishing</p>
+<p style="text-align: center;"><a href="/images/sitesettings-featuredisabled.png"><img class=" wp-image-212 aligncenter" src="http://www.sanjaybhagia.com/wp-content/uploads/2013/03/sitesettings-featuredisabled.png" alt="sitesettings-featuredisabled" width="540" height="320" /></a></p>
+So for custom web templates, you are required to activate this feature.  Here is the PowerShell code for enabling this feature on a specific site collection.
+<pre><code class="ps">$snapin = Get-PSSnapin | Where-Object {$_.Name -eq 'Microsoft.SharePoint.Powershell'}
+
+if ($snapin -eq $null)
+{
+Write-Host "Loading SharePoint Powershell Snapin"
+Add-PSSnapin "Microsoft.SharePoint.Powershell" -EA SilentlyContinue
+}
+
+#Enable &lt;strong&gt;TaxonomyFieldAdded &lt;/strong&gt;feature on site collection
+Enable-SPFeature –Identity 73EF14B1-13A9-416b-A9B5-ECECA2B0604C –url "http://portal.local.domain/sites/subsite1/"</code></pre>
+<p>Once feature is activated, you will see the links in Site Settings appear !
+<a href="http://www.sanjaybhagia.com/wp-content/uploads/2013/03/sitesettings-featureenabled.png"><img class="wp-image-213 aligncenter" src="/images/sitesettings-featureenabled.png" alt="sitesettings-featureenabled" width="540" height="303" /></a></p>
+<p style="text-align: justify;">Now, you should be able to consume content types from content type hub as expected. You can activate this feature directly from your web template, add an entry for this feature in onet.xml file for your web template, in this way you don't have to enable this feature manually.</p>
+<pre><code class="xml">&lt;/pre&gt;
+&lt;SiteFeatures&gt;
+&lt;!-- OOTB: Taxonomy --&gt;
+&lt;Feature ID="73EF14B1-13A9-416b-A9B5-ECECA2B0604C" /&gt;
+&lt;/SiteFeatures&gt;
+&lt;pre&gt;</code></pre>
+
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+    var disqus_shortname = 'sanjaybhagia';
+    var disqus_identifier = 'consuming-content-type-hub-in-custom-web-templates';
+    var disqus_title = 'Consuming Content Type Hub in custom web templates';
+    var disqus_url = 'http://sanjaybhagia.com/2013/03/consuming-content-type-hub-in-custom-web-templates';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                        </div>
+                </div>
+                
+                <hr>
+                
+                <!-- Footer -->
+                <footer>
+                        <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                <ul class="list-inline text-center">
+                        <li>
+                        <a href="https://twitter.com/bhagiasanjay">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://github.com/sanjaybhagia">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://www.linkedin.com/in/sanjaybhagia/">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                </ul>
+                <p class="copyright text-muted">                        
+                        This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+                        <br />
+                        <a href="/rss.xml"><i class="fa fa-rss"></i> RSS Feed</a> | <a href="/feed.xml"><i class="fa fa-rss"></i> Atom Feed</a>
+                        <br />
+                        <a href="https://github.com/sanjaybhagia/sanjaybhagia.com"><i class="fa fa-github"></i> This Site on GitHub</a> | <a href="https://wyam.io">Generated by Wyam</a>
+                </p>
+                </div>
+        </div>
+</div>
+                </footer> 
+
+                
+                <script>hljs.initHighlightingOnLoad();</script>
+
+                        <script type="text/javascript">                
+                                // Header background                        
+                                var colors = Please.make_color({
+                                        colors_returned: 3,
+                                        saturation: .6
+                                });
+                                var t = new Trianglify({
+                                        x_gradient: colors,
+                                        y_gradient: ["#FFFFFF"]
+                                });
+                                var header = document.getElementById("intro-header");
+                                var pattern = t.generate(header.clientWidth, header.clientHeight);
+                                header.setAttribute('style', 'background-image: ' + pattern.dataUrl);                        
+                        </script>
+        </body>
+</html>

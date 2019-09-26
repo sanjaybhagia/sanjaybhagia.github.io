@@ -1,0 +1,318 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+        <title>Sanjay Bhagia&#x27;s Blog - Accessing WCF Service via Azure Service Bus Relay with .NET Core</title>
+        <meta name="description" content="Sanjay Bhagia" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link type="application/rss+xml" rel="alternate" title="Sanjay Bhagia&#x27;s Blog" href="/rss.xml" />
+                <link type="application/atom+xml" rel="alternate" title="Sanjay Bhagia&#x27;s Blog" href="/feed.xml" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/clean-blog.css" rel="stylesheet" />
+        <link href="/assets/css/master.css" rel="stylesheet" />
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/assets/css/override.css" rel="stylesheet" />
+
+
+        <meta name="application-name" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta name="msapplication-tooltip" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta name="msapplication-starturl" content="/" />
+
+        <meta property="og:site_name" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta property="og:title" content="Accessing WCF Service via Azure Service Bus Relay with .NET Core" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://sanjaybhagia.com/2018/11/accessing-wcf-service-via-azure-service-bus-relay-with-net-core" />
+                        <meta property="og:description" content="&lt;amp-fit-text layout=&quot;fixed-height&quot; min-font-size=&quot;14&quot; max-font-size=&quot;48&quot; height=&quot;50&quot;&gt;&lt;/amp-fit-text&gt;" />
+
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/highlight.pack.js"></script>
+        <script src="/assets/js/clean-blog.js"></script>
+        <script src="/assets/js/d3.v3.min.js"></script>
+        <script src="/assets/js/trianglify.min.js"></script>
+        <script src="/assets/js/please-compressed.js"></script>
+        <!-- <script src="/assets/js/background-check.min.js"></script> -->
+                
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                <script src="/assets/js/html5shiv.js"></script>
+                <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->
+        
+        
+
+
+        </head>
+        <body>
+                
+                <!-- Navigation -->
+                <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+                        <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header page-scroll">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="/">Sanjay Bhagia&#x27;s Blog</a>
+                                </div>
+                        
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse">
+                                        <ul class="nav navbar-nav navbar-right">
+                                                <li><a href="/about">About Me</a></li>
+<li><a href="/posts">Archive</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/tools">Tools</a></li> 
+                                        </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                </nav>
+                
+                <!-- Page Header -->
+                <header class="intro-header" id="intro-header">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-12">
+
+    
+<div class="post-heading">
+    <h1>Accessing WCF Service via Azure Service Bus Relay with .NET Core</h1>
+    <div class="meta">        
+Published on Wednesday, 28 November 2018<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/net-core" class="btn btn-default btn-xs">.net-core</a>
+                    <a role="button" href="/tags/servicebus-relay" class="btn btn-default btn-xs">servicebus-relay</a>
+                    <a role="button" href="/tags/soap" class="btn btn-default btn-xs">soap</a>
+                    <a role="button" href="/tags/wcf" class="btn btn-default btn-xs">wcf</a>
+        </div>     
+</div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+                
+                <!-- Main Content -->
+                <div class="container">
+                        <div class="row">
+                                <div id="content" class="col-md-12">
+                                        
+
+<!-- wp:paragraph {"ampFitText":true} -->
+<p><amp-fit-text layout="fixed-height" min-font-size="14" max-font-size="48" height="50"><p><em><a href="https://github.com/sanjaybhagia/wcfservice-servicebusrelay-netcore" target="_blank" rel="noreferrer noopener" aria-label="Check out my GitHub repository if you want to dig into the source code directly. (opens in a new tab)">Check out my GitHub repository if you want to dig into the source code directly.</a></em></p></amp-fit-text></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>WCF (Windows Communication Foundation) has served us for a long time when it comes to talking to many LOB systems (SAP etc.). You might have love or hate (<em>though&nbsp;if I have to guess, it would be on hate side</em>) relationship with WCF but it works and at times we don't have any other choice. If you happen to be in a situation where you are talking to legacy systems via WCF, you most likely have a built an API layer on top of it to serve your clients. </p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>I was recently looking to consume WCF services using .NET Core <em>(with the intention that I can migrate my web application to .NET Core)</em>. Very quickly I came up to this <a href="https://github.com/dotnet/wcf" target="_blank" rel="noopener">GitHub&nbsp;repository</a> which was awesome. However, this .NET&nbsp;Core implementation is not in parity with the full framework yet.&nbsp; I tested it and it worked just fine with standard bindings (<g class="gr_ gr_7 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace" id="7" data-gr-id="7">http</g>&nbsp;etc). <a href="https://twitter.com/spboyer" target="_blank" rel="noopener">Shane Boyer</a> has a good <a href="http://tattoocoder.com/asp-net-core-getting-clean-with-soap/" target="_blank" rel="noopener">blog post</a> on this topic if you want to see how to use this.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>As far as my needs (this particular scenario) are concerned, I couldn't get it to work for my setup.&nbsp;This is how the setup looks for me.&nbsp;</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>The web application (hosted in Azure Web App) talks to WCF Service (running on-premises, hosted in IIS) via Azure Service Bus Relay (in Azure)</p>
+<!-- /wp:paragraph -->
+<!-- wp:image {"id":673} -->
+<figure class="wp-block-image"><img src="/images/image-21.png" alt="" class="wp-image-673"/></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>So basically, there is no equivalent to basicHttpRelayBinding <g class="gr_ gr_33 gr-alert gr_gramm gr_inline_cards gr_run_anim Style multiReplace" id="33" data-gr-id="33">in .</g>NET Core implementation yet and this is something my WCF service has to enable communication via Azure Service Bus Relay.&nbsp;</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>After discussing with a friend of mine, I got a suggestion to try it out with SOAP instead and it seems to work fine! I know it sounds a bit ironic that on the one hand I'm moving to the latest (and greatest) framework for my web application but at the same time, I'm going one step back and using SOAP protocol to make it work - well such is life. I would very much appreciate if anyone can point me to the better solution. but until then, let's continue forward.</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>So, in this blog post<g class="gr_ gr_182 gr-alert sel gr_gramm gr_replaced gr_inline_cards gr_disable_anim_appear Punctuation only-ins replaceWithoutSep" id="182" data-gr-id="182">,</g> I will go through how did I manage to call WCF service from my .NET Core Web Application. Again,&nbsp;<a href="https://github.com/sanjaybhagia/wcfservice-servicebusrelay-netcore" target="_blank" rel="noreferrer noopener">here is the entire source code</a></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><a href="https://github.com/sanjaybhagia/wcfservice-servicebusrelay-netcore" target="_blank" rel="noopener"></a>So this is what <g class="gr_ gr_17 gr-alert sel gr_spell gr_replaced gr_inline_cards gr_disable_anim_appear ContextualSpelling multiReplace" id="17" data-gr-id="17">I'm</g> going to do:&nbsp;</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul><li>Create Azure Service Bus Relay (<a href="https://docs.microsoft.com/en-us/azure/service-bus-relay/service-bus-dotnet-hybrid-app-using-service-bus-relay" target="_blank">read here how to create this</a>)</li><li>Create a WCF Service (with Azure Service Bus Relay Binding) and publish this locally to run it on IIS</li><li>ASP.NET Core Web Application calling to WCF Service using HTTP Post SOAP request.</li></ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>Follow the link I have provided above to create the service bus relay. Let's start with WCF Service. Here is the <a href="https://github.com/sanjaybhagia/wcfservice-servicebusrelay-netcore/tree/master/WcfService" target="_blank">sample WCF <g class="gr_ gr_188 gr-alert gr_gramm gr_inline_cards gr_disable_anim_appear Punctuation only-ins replaceWithoutSep" id="188" data-gr-id="188">project</g></a> I build for this demo.&nbsp; It's a very basic WCF service which has Azure Service Bus Relay binding besides standard HTTP&nbsp;binding (check out the <a href="https://github.com/sanjaybhagia/wcfservice-servicebusrelay-netcore/blob/master/WcfService/WcfService/Web.config" target="_blank">web.config</a> for binding details). I have deployed this in IIS on my local machine. You can clone the repository and add the details of your relay if you want to try it out yourself. It exposes the following contract, which I'm interested in.</p>
+<!-- /wp:paragraph -->
+<!-- wp:code -->
+<pre class="wp-block-code"><code lang="clike" class="language-clike">[ServiceContract]
+    public interface ICustomerService
+    {
+        [OperationContract]
+        string GetCustomerData(string customerId);
+    }</code></pre>
+<!-- /wp:code -->
+<!-- wp:paragraph -->
+<p>When you&nbsp;browse&nbsp;this service from IIS you should see the service like this. At this point, a Service Bus WCF listener should also be registered in your namespace (you can check it in Azure Portal)</p>
+<!-- /wp:paragraph -->
+<!-- wp:image {"id":660} -->
+<figure class="wp-block-image"><img src="/images/image-14.png" alt="" class="wp-image-660"/><figcaption>WCF Service deployed in IIS with Azure Service Relay Binding</figcaption></figure>
+<!-- /wp:image -->
+<!-- wp:image {"id":667} -->
+<figure class="wp-block-image"><img src="/images/image-18.png" alt="" class="wp-image-667"/><figcaption>WCF Relay Registered from WCF Service</figcaption></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>Now, let's start with the web application. I have created a vanilla ASP.NET Core Web API project (2.1). You can grab the <a href="https://github.com/sanjaybhagia/wcfservice-servicebusrelay-netcore/tree/master/WebApplication" target="_blank" rel="noopener">source code from here </a>(and clone it if you want to try it out yourself). <em>Make sure you update settings in <g class="gr_ gr_6 gr-alert gr_gramm gr_inline_cards gr_run_anim Grammar only-ins doubleReplace replaceWithoutSep" id="6" data-gr-id="6">appsettings.json</g> file for Azure Service Bus Relay. If you wish you publish this to Azure Web app - add these settings as Application Settings</em></p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>After creating the project, I added following NuGet package</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p><strong>Nuget Packages:&nbsp;</strong></p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul><li>Microsoft.Azure.ServiceBus</li></ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>In <strong>ValuesController</strong>, I have created a <em>GetCustomerData</em> method that takes in <em>customerId</em> as a string.&nbsp; In here, I'll make a call to WCF Service and return the response I receive from the service (<em>the WCF service returns a dummy response</em>)</p>
+<!-- /wp:paragraph -->
+<!-- wp:code -->
+<pre class="wp-block-code"><code lang="clike" class="language-clike">[HttpGet("{customerId}")]
+public async Task&lt;string> GetCustomerData(string customerId)</code></pre>
+<!-- /wp:code -->
+<!-- wp:paragraph -->
+<p>Then moving forwards,&nbsp; I generate the token for Azur Service Bus Relay:</p>
+<!-- /wp:paragraph -->
+<!-- wp:image {"id":665,"linkDestination":"custom"} -->
+<figure class="wp-block-image"><a href="https://github.com/sanjaybhagia/wcfservice-servicebusrelay-netcore/blob/master/WebApplication/WebApplication/Controllers/ValuesController.cs"><img src="/images/image-17.png" alt="" class="wp-image-665"/></a><figcaption>Generating Token for Service Bus Relay</figcaption></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>With this information, I construct the HTTP Post request like this:</p>
+<!-- /wp:paragraph -->
+<!-- wp:github-gist-gutenberg-block/github-gist {"url":"https://gist.github.com/sanjaybhagia/569e348e1bdc9fd9a53c95d28cd0e56e"} -->
+<script src="//gist.github.com/569e348e1bdc9fd9a53c95d28cd0e56e.js" type="text/javascript"></script>
+<!-- <a href="https://gist.github.com/sanjaybhagia/569e348e1bdc9fd9a53c95d28cd0e56e" class="wp-block-github-gist-gutenberg-block-github-gist">View Gist on GitHub</a> -->
+<!-- /wp:github-gist-gutenberg-block/github-gist -->
+<!-- wp:paragraph -->
+<p>We are basically making <g class="gr_ gr_49 gr-alert sel gr_gramm gr_replaced gr_inline_cards gr_disable_anim_appear Grammar multiReplace" id="49" data-gr-id="49">an</g> HTTP Post Request to the Service Bus Relay endpoint over SOAP. For this, we need to set up a few headers</p>
+<!-- /wp:paragraph -->
+<!-- wp:list -->
+<ul><li>ServiceBusAuthorization - <em>Relay Token retrieved earlier</em></li><li>SOAPAction - <em>The Operation you want to call from WCF Service</em></li><li>Accept header - <em>text/</em><g class="gr_ gr_117 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace" id="117" data-gr-id="117">xml</g></li></ul>
+<!-- /wp:list -->
+<!-- wp:paragraph -->
+<p>Lastly, we need to set the body for the request - since this is a SOAP call, we need a&nbsp;<g class="gr_ gr_3 gr-alert gr_gramm gr_inline_cards gr_run_anim Grammar only-ins replaceWithoutSep" id="3" data-gr-id="3">SOAP</g> message.</p>
+<!-- /wp:paragraph -->
+<!-- wp:image {"id":664,"linkDestination":"custom"} -->
+<figure class="wp-block-image"><a href="https://github.com/sanjaybhagia/wcfservice-servicebusrelay-netcore/blob/master/WebApplication/WebApplication/Controllers/ValuesController.cs"><img src="/images/image-16.png" alt="" class="wp-image-664"/></a><figcaption>SOAP message body</figcaption></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>Press F5 and run the web application, pass in <g class="gr_ gr_130 gr-alert gr_spell gr_inline_cards gr_run_anim ContextualSpelling ins-del multiReplace" id="130" data-gr-id="130"><g class="gr_ gr_137 gr-alert gr_gramm gr_inline_cards gr_run_anim Grammar only-ins doubleReplace replaceWithoutSep" id="137" data-gr-id="137">cusotmerId</g></g> parameter and you should get <g class="gr_ gr_138 gr-alert sel gr_gramm gr_replaced gr_inline_cards gr_disable_anim_appear Grammar only-ins doubleReplace replaceWithoutSep" id="138" data-gr-id="138">a </g>response from the service:</p>
+<!-- /wp:paragraph -->
+<!-- wp:image {"id":661} -->
+<figure class="wp-block-image"><img src="/images/image-15.png" alt="" class="wp-image-661"/><figcaption>Successful response from WCF Service</figcaption></figure>
+<!-- /wp:image -->
+<!-- wp:paragraph -->
+<p>Have you tried to consume WCF Service from .NET Core application? How did it go for you? I would love to hear from you and would appreciate if you could suggest a&nbsp;better way of doing this as of today? I guess I don't need to tell you that I don't like using SOAP :)</p>
+<!-- /wp:paragraph -->
+<!-- wp:paragraph -->
+<p>Cheers.</p>
+<!-- /wp:paragraph -->
+
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+    var disqus_shortname = 'sanjaybhagia';
+    var disqus_identifier = 'accessing-wcf-service-via-azure-service-bus-relay-with-net-core';
+    var disqus_title = 'Accessing WCF Service via Azure Service Bus Relay with .NET Core';
+    var disqus_url = 'http://sanjaybhagia.com/2018/11/accessing-wcf-service-via-azure-service-bus-relay-with-net-core';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                        </div>
+                </div>
+                
+                <hr>
+                
+                <!-- Footer -->
+                <footer>
+                        <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                <ul class="list-inline text-center">
+                        <li>
+                        <a href="https://twitter.com/bhagiasanjay">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://github.com/sanjaybhagia">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://www.linkedin.com/in/sanjaybhagia/">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                </ul>
+                <p class="copyright text-muted">                        
+                        This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+                        <br />
+                        <a href="/rss.xml"><i class="fa fa-rss"></i> RSS Feed</a> | <a href="/feed.xml"><i class="fa fa-rss"></i> Atom Feed</a>
+                        <br />
+                        <a href="https://github.com/sanjaybhagia/sanjaybhagia.com"><i class="fa fa-github"></i> This Site on GitHub</a> | <a href="https://wyam.io">Generated by Wyam</a>
+                </p>
+                </div>
+        </div>
+</div>
+                </footer> 
+
+                
+                <script>hljs.initHighlightingOnLoad();</script>
+
+                        <script type="text/javascript">                
+                                // Header background                        
+                                var colors = Please.make_color({
+                                        colors_returned: 3,
+                                        saturation: .6
+                                });
+                                var t = new Trianglify({
+                                        x_gradient: colors,
+                                        y_gradient: ["#FFFFFF"]
+                                });
+                                var header = document.getElementById("intro-header");
+                                var pattern = t.generate(header.clientWidth, header.clientHeight);
+                                header.setAttribute('style', 'background-image: ' + pattern.dataUrl);                        
+                        </script>
+        </body>
+</html>

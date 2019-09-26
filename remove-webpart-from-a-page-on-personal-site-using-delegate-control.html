@@ -1,0 +1,276 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+        <title>Sanjay Bhagia&#x27;s Blog - Remove webpart from a page on Personal site using delegate control</title>
+        <meta name="description" content="Sanjay Bhagia" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link type="application/rss+xml" rel="alternate" title="Sanjay Bhagia&#x27;s Blog" href="/rss.xml" />
+                <link type="application/atom+xml" rel="alternate" title="Sanjay Bhagia&#x27;s Blog" href="/feed.xml" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/clean-blog.css" rel="stylesheet" />
+        <link href="/assets/css/master.css" rel="stylesheet" />
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/assets/css/override.css" rel="stylesheet" />
+
+
+        <meta name="application-name" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta name="msapplication-tooltip" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta name="msapplication-starturl" content="/" />
+
+        <meta property="og:site_name" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta property="og:title" content="Remove webpart from a page on Personal site using delegate control" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://sanjaybhagia.com/2013/01/remove-webpart-from-a-page-on-personal-site-using-delegate-control" />
+                        <meta property="og:description" content="style=&quot;text-align:justify;&quot;&gt;Customizing Personal Sites (site collections for users in my site) could be little challenging at times. One reason being that personal site is provisioned automatically by SharePoint and there could be more than one point from which user can provision the site and there is no support to create your own web template or site definition, as we can do with every other type of site (&lt;em&gt;as per my knowledge&lt;/em&gt;). Creating your own web template provides great flexibility and easiness to provision sites &amp;nbsp;having your own settings and all but lacking this feature for personal sites provide us more challenges, even for small customizations at times. In a recent project, one of the customer&#x27;s wish was to remove &quot;Recent Blog Posts&quot; web part from default page when user provisions the personal site." />
+
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/highlight.pack.js"></script>
+        <script src="/assets/js/clean-blog.js"></script>
+        <script src="/assets/js/d3.v3.min.js"></script>
+        <script src="/assets/js/trianglify.min.js"></script>
+        <script src="/assets/js/please-compressed.js"></script>
+        <!-- <script src="/assets/js/background-check.min.js"></script> -->
+                
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                <script src="/assets/js/html5shiv.js"></script>
+                <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->
+        
+        
+
+
+        </head>
+        <body>
+                
+                <!-- Navigation -->
+                <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+                        <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header page-scroll">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="/">Sanjay Bhagia&#x27;s Blog</a>
+                                </div>
+                        
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse">
+                                        <ul class="nav navbar-nav navbar-right">
+                                                <li><a href="/about">About Me</a></li>
+<li><a href="/posts">Archive</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/tools">Tools</a></li> 
+                                        </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                </nav>
+                
+                <!-- Page Header -->
+                <header class="intro-header" id="intro-header">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-12">
+
+    
+<div class="post-heading">
+    <h1>Remove webpart from a page on Personal site using delegate control</h1>
+    <div class="meta">        
+Published on Saturday, 12 January 2013<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/delegate-controls" class="btn btn-default btn-xs">Delegate Controls</a>
+                    <a role="button" href="/tags/feature-stappling" class="btn btn-default btn-xs">Feature Stappling</a>
+                    <a role="button" href="/tags/feaures" class="btn btn-default btn-xs">Feaures</a>
+                    <a role="button" href="/tags/personal-site" class="btn btn-default btn-xs">Personal Site</a>
+                    <a role="button" href="/tags/webparts" class="btn btn-default btn-xs">WebParts</a>
+        </div>     
+</div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+                
+                <!-- Main Content -->
+                <div class="container">
+                        <div class="row">
+                                <div id="content" class="col-md-12">
+                                        
+
+<p style="text-align:justify;">Customizing Personal Sites (site collections for users in my site) could be little challenging at times. One reason being that personal site is provisioned automatically by SharePoint and there could be more than one point from which user can provision the site and there is no support to create your own web template or site definition, as we can do with every other type of site (<em>as per my knowledge</em>). Creating your own web template provides great flexibility and easiness to provision sites  having your own settings and all but lacking this feature for personal sites provide us more challenges, even for small customizations at times. In a recent project, one of the customer's wish was to remove "Recent Blog Posts" web part from default page when user provisions the personal site.</p>
+<p style="text-align:justify;"><strong>Solution</strong>: After trying out different approaches the final solution turned out to create a delegate control that removes the web part from the page when site is provisioned and having this delegate control added on the site collection through feature stappling.</p>
+So, here is what I did to fulfill this requirement.
+<ol>
+	<li>Create a delegate control</li>
+<p>Here is the element file for delegate control</p>
+<pre><code class="xml">
+&lt;!--?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?--&gt;
+
+ &lt;Control
+ ControlAssembly=&quot;MyAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b848d3ec396f6039&quot;
+ ControlClass=&quot;MyAssembly.RemoveWebPartsFromPersonalSiteDefaultPage&quot; Id=&quot;AdditionalPageHead&quot; Sequence=&quot;50&quot;
+
+</code></pre>
+<pre><code>&lt;li&gt;Fetch the desired webpart and remove it&lt;/li&gt;
+</code></pre>
+</ol>
+and in the code behind file for this delegate control add the functionality to fetch and remove the desired webpart (I've added this logic in Render method)
+<pre><code class="csharp">
+
+//... code removed
+
+//Fetch Web Part title from SPCore resoruce file for current web language
+ //It is important to fetch the localed based on current site's language not based on Browser locale or regional settings!
+ var localizedRecentPostWebPartName = SPUtility.GetLocalizedString(&quot;$Resources:spscore,MySiteOnet_WebPart_Blog&quot;, &quot;spscore&quot;, SPContext.Current.Web.Language);
+
+//remove the webpart
+ RemoveWebPartsFromWebPartPage(SPContext.Current.Web, &quot;default.aspx&quot;, &quot;MiddleRightZone&quot;, localizedRecentPostWebPartName);
+
+ //add page redirectino logic otherwise it will be an infinite loop
+ // ... code removed
+
+</code></pre>
+<p>Here is the definition of RemoveWebPartsFromWebPartPage method:</p>
+<pre><code class="csharp">
+
+//... code removed
+
+using (SP.SPLimitedWebPartManager webpartManager = web.GetLimitedWebPartManager(webPartPage.Url, Web.PersonalizationScope.Shared))
+{
+  var collection = webpartManager.WebParts;
+  List webParts = new List();
+
+  foreach (WebPart webPart in collection)
+  {
+    if (fromZoneId == webpartManager.GetZoneID(webPart))
+    {
+      if (webPart.DisplayTitle == webPartTitle)
+      {
+          webParts.Add(webPart);
+      }
+    }
+  }
+
+ // delete the web parts
+ foreach (WebPart webPart in webParts)
+ {
+   webpartManager.DeleteWebPart(webPart);
+ }
+}
+
+</code></pre>
+<p style="text-align:justify;">That's it! that is the functionality that we need to remove the webpart. We created a delegate control that contains the code to remove the web part from desired page! Now comes the part where we need to execute this delegate. You can use different approaches depending on your requirement. For this demo, we create a simple site scoped feature and add this delegate as an item in that feature.</p>
+<p style="text-align:justify;">Build your solution, create the package and deploy it. Activate the feature. Having this feature activated, as soon as user navigates to the default page, our delegate control will kick in and looks for the desired web part and removes it!</p>
+<p style="text-align:justify;">Other approaches could be creating feature stappling mechanism that attaches our delegate control with desire web templates so that this control is attached to every site that is created.</p>
+Hope it helps!
+
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+    var disqus_shortname = 'sanjaybhagia';
+    var disqus_identifier = 'https://sanjaybhagia.com/2013/01/remove-webpart-from-a-page-on-personal-site-using-delegate-control/';
+    var disqus_title = 'Remove webpart from a page on Personal site using delegate control';
+    var disqus_url = 'http://sanjaybhagia.com/2013/01/remove-webpart-from-a-page-on-personal-site-using-delegate-control';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                        </div>
+                </div>
+                
+                <hr>
+                
+                <!-- Footer -->
+                <footer>
+                        <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                <ul class="list-inline text-center">
+                        <li>
+                        <a href="https://twitter.com/bhagiasanjay">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://github.com/sanjaybhagia">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://www.linkedin.com/in/sanjaybhagia/">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                </ul>
+                <p class="copyright text-muted">                        
+                        This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+                        <br />
+                        <a href="/rss.xml"><i class="fa fa-rss"></i> RSS Feed</a> | <a href="/feed.xml"><i class="fa fa-rss"></i> Atom Feed</a>
+                        <br />
+                        <a href="https://github.com/sanjaybhagia/sanjaybhagia.com"><i class="fa fa-github"></i> This Site on GitHub</a> | <a href="https://wyam.io">Generated by Wyam</a>
+                </p>
+                </div>
+        </div>
+</div>
+                </footer> 
+
+                
+                <script>hljs.initHighlightingOnLoad();</script>
+
+                        <script type="text/javascript">                
+                                // Header background                        
+                                var colors = Please.make_color({
+                                        colors_returned: 3,
+                                        saturation: .6
+                                });
+                                var t = new Trianglify({
+                                        x_gradient: colors,
+                                        y_gradient: ["#FFFFFF"]
+                                });
+                                var header = document.getElementById("intro-header");
+                                var pattern = t.generate(header.clientWidth, header.clientHeight);
+                                header.setAttribute('style', 'background-image: ' + pattern.dataUrl);                        
+                        </script>
+        </body>
+</html>

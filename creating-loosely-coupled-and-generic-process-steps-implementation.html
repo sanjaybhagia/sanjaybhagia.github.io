@@ -1,0 +1,409 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+
+        <title>Sanjay Bhagia&#x27;s Blog - Creating loosely coupled and generic process steps implementation</title>
+        <meta name="description" content="Sanjay Bhagia" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link type="application/rss+xml" rel="alternate" title="Sanjay Bhagia&#x27;s Blog" href="/rss.xml" />
+                <link type="application/atom+xml" rel="alternate" title="Sanjay Bhagia&#x27;s Blog" href="/feed.xml" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/clean-blog.css" rel="stylesheet" />
+        <link href="/assets/css/master.css" rel="stylesheet" />
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href="/assets/css/override.css" rel="stylesheet" />
+
+
+        <meta name="application-name" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta name="msapplication-tooltip" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta name="msapplication-starturl" content="/" />
+
+        <meta property="og:site_name" content="Sanjay Bhagia&#x27;s Blog" />
+        <meta property="og:title" content="Creating loosely coupled and generic process steps implementation" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://sanjaybhagia.com/2013/05/creating-loosely-coupled-and-generic-process-steps-implementation" />
+                        <meta property="og:description" content="style=&quot;text-align:justify;&quot;&gt;Recently, during one of the SharePoint implementations we came across the requirement to build the workflow for site provisioning engine that we are developing." />
+
+        <script src="/assets/js/jquery.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>
+        <script src="/assets/js/highlight.pack.js"></script>
+        <script src="/assets/js/clean-blog.js"></script>
+        <script src="/assets/js/d3.v3.min.js"></script>
+        <script src="/assets/js/trianglify.min.js"></script>
+        <script src="/assets/js/please-compressed.js"></script>
+        <!-- <script src="/assets/js/background-check.min.js"></script> -->
+                
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+                <script src="/assets/js/html5shiv.js"></script>
+                <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->
+        
+        
+
+
+        </head>
+        <body>
+                
+                <!-- Navigation -->
+                <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+                        <div class="container-fluid">
+                                <!-- Brand and toggle get grouped for better mobile display -->
+                                <div class="navbar-header page-scroll">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        </button>
+                                        <a class="navbar-brand" href="/">Sanjay Bhagia&#x27;s Blog</a>
+                                </div>
+                        
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse" id="navbar-collapse">
+                                        <ul class="nav navbar-nav navbar-right">
+                                                <li><a href="/about">About Me</a></li>
+<li><a href="/posts">Archive</a></li>
+<li><a href="/tags">Tags</a></li>
+<li><a href="/tools">Tools</a></li> 
+                                        </ul>
+                                </div>
+                                <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container -->
+                </nav>
+                
+                <!-- Page Header -->
+                <header class="intro-header" id="intro-header">
+                        <div class="container">
+                                <div class="row">
+                                        <div class="col-md-12">
+
+    
+<div class="post-heading">
+    <h1>Creating loosely coupled and generic process steps implementation</h1>
+    <div class="meta">        
+Published on Thursday, 2 May 2013<br>    </div>
+        <div class="tags">
+                    <a role="button" href="/tags/flexible" class="btn btn-default btn-xs">flexible</a>
+                    <a role="button" href="/tags/inheritence" class="btn btn-default btn-xs">Inheritence</a>
+                    <a role="button" href="/tags/interface" class="btn btn-default btn-xs">Interface</a>
+                    <a role="button" href="/tags/loosely-couple" class="btn btn-default btn-xs">Loosely couple</a>
+                    <a role="button" href="/tags/process" class="btn btn-default btn-xs">Process</a>
+                    <a role="button" href="/tags/processsteps" class="btn btn-default btn-xs">ProcessSteps</a>
+                    <a role="button" href="/tags/queue" class="btn btn-default btn-xs">Queue</a>
+                    <a role="button" href="/tags/rollback" class="btn btn-default btn-xs">Rollback</a>
+                    <a role="button" href="/tags/site-collection" class="btn btn-default btn-xs">Site Collection</a>
+                    <a role="button" href="/tags/stack" class="btn btn-default btn-xs">Stack</a>
+                    <a role="button" href="/tags/workflow" class="btn btn-default btn-xs">Workflow</a>
+        </div>     
+</div>
+                                        </div>
+                                </div>
+                        </div>
+                </header>
+                
+                <!-- Main Content -->
+                <div class="container">
+                        <div class="row">
+                                <div id="content" class="col-md-12">
+                                        
+
+<p style="text-align:justify;">Recently, during one of the SharePoint implementations we came across the requirement to build the workflow for site provisioning engine that we are developing.</p>
+<p style="text-align:justify;">One of the requirements of the process is to rollback everything that we create/modify if there is any problem/exception during the process. So for example, if we created the site collection and then in the next step process failed at setting up custom permissions, the process should be roll backed to the initial stage.</p>
+<p style="text-align:justify;">Normally, this is no big deal to implement everything as a standard workflow and you write a piece of code for different activities of the workflow (or use standard workflow activities from Visual Studio toolbox) but then an idea came up why not write an implementation of the process steps independent of the workflow in a nice and loosely couple way that should take care of roll back in a much flexible and nicer and cleaner way !</p>
+<p style="text-align:justify;">So in this post, I will try to describe the solution that I came up with and also implementation details.</p>
+<p style="text-align:justify;">So here is the implementation details:</p>
+<p style="text-align:justify;">First, I created an interface that contains the method declarations for Execute and RollBack methods</p>
+<pre><code class="csharp">
+public interface IProcessStep
+{
+   void Execute(ProcessStepProperties properties);
+
+   void RollBack(ProcessStepProperties properties);
+}
+
+</code></pre>
+<p style="text-align:justify;">As you see in the code above, I'm using parameter of type ProcessStepProperties. This is basically a custom class that I use as a data transfer object (DTO) across different steps and methods. It's basically a collection (dictionary in my implementation) that contain key/value pairs. Here is the implementation:</p>
+<pre><code class="csharp">
+public class ProcessStepProperties
+{
+   public Dictionary&lt;String, Object&gt; Keys = new Dictionary&lt;String, Object&gt;();
+
+   public bool KeyExists(String key)
+   {
+     if (Keys.ContainsKey(key) &amp;&amp; Keys[key] != null)
+        return true;
+     return false;
+   }
+}
+</code></pre>
+<p style="text-align:justify;">Having interface ready, we write a class that defines one the process steps. This step is CreateSiteStep that creates the site collection. This class inherits from our interface IProcessStep and hence it provides the implementation of Execute and RollBack methods.</p>
+<pre><code class="csharp">
+public class CreateSiteStep : IProcessStep
+{
+   //private method to check for preconditions for Execute method
+   private bool PrequisitesPresent(ProcessStepProperties properties)
+   {
+      if (properties.KeyExists(&quot;SiteNumber&quot;) &amp;&amp; properties.KeyExists(&quot;Title&quot;) &amp;&amp; properties.KeyExists(&quot;TemplateName&quot;))
+         return true;
+      return false;
+   }
+
+   public void Execute(ProcessStepProperties properties)
+   {
+      //Check if preconditions are met
+      if (PrequisitesPresent(properties))
+      {
+         //Create site collection
+         CreateSiteFromRequest(properties);
+
+         //Update the property bag
+         var spSite = properties.Keys[&quot;SPSite&quot;] as SPSite;
+         if (spSite != null)
+         {
+            properties.Keys[&quot;SiteUrl&quot;] = spSite.Url;
+         }
+      }
+
+      //Write checkpoint for rollback
+      TransactionLogger.Log(this);
+   }
+
+   public void RollBack(ProcessStepProperties properties)
+   {
+        // Add Logging information  - ULS or event logger if appropriate
+        SPSite site = properties.Keys[&quot;SPSite&quot;] as SPSite;
+        DeleteSite(site);
+   }
+</code></pre>
+<p style="text-align:justify;">Now there are couple of things that need to be discussed in the above code.</p>
+<p style="text-align:justify;">Firstly, as you see, I have created a private method to check pre-conditions before the Execute method is executed. This is totally upto the specific step to check if it requires any pre-conditions to be met or any values it requires before it proceeds.</p>
+<p style="text-align:justify;">Secondly, as i mentioned above I'm using ProcessProperties class (key/value collection) to transfer the state across methods and steps, I'm updating (adding) the value in the collection right after Site collection has been created. In this way, the next step (or rollback) step will have the updated information that might be useful for further execution of the process.</p>
+<p style="text-align:justify;">Thirdly and quite importantly there is a call to Log method of  TransactionLogger class.
+<strong>TransactionLogger.Log(this);</strong></p>
+<p style="text-align:justify;">This is very important. Again, TransactionLogger is my custom class that I'm using to log in the information for steps that have successfully been completed. This serves the purpose of check point for me that i use to roll back when anything fails. I'm using Stack as a data structure to push the steps (of type <em>IProcessStep</em>) whenever any step is successfully executed and if there is any failure during the execution, i simply pop the steps and invoke RollBack method until stack is empty - hence everything is cleaned up in case of failover.</p>
+<p style="text-align:justify;">Here is the implementation of TransactionLogger class.</p>
+<pre><code class="csharp">
+public class TransactionLogger
+{
+  //to keep checkpoints
+  private static readonly Stack TransactionStack = new Stack();
+
+  //public property to check number of steps in the stack
+  public static int LogCount
+  {
+      get { return TransactionStack.Count; }
+  }
+
+  private IProcessStep Pull()
+  {
+     return TransactionStack.Pop();
+  }
+
+  //Pushes the process step into the stack
+  public static void Log(IProcessStep step)
+  {
+      TransactionStack.Push(step);
+  }
+
+  //Pops the step from stack and invoke rollback method for every step  until stack is empty
+  public static void RollBack(ProcessStepProperties properties)
+  {
+      while (TransactionStack.Count &gt; 0)
+      {
+          var step = TransactionStack.Pop();
+          step.RollBack(properties);
+      }
+   }
+}
+</code></pre>
+<p style="text-align:justify;">So, basically the idea is that in case of any failure everything is rolled back and in the implementation above, TransactionLogger class doesn't need to know the details about any ProcessStep class how to roll back because it is upto every step to roll back the things it has created. That is why TransactionLogger class adds IProcessStep object into the stack and that is our interface!
+here is another class called SetSitePermissionGroupStep that basically adds custom permissions to the site collection that has been created in previous process step.</p>
+<pre><code class="chsarp">
+public class SetSitePermissionGroupStep : IProcessStep
+{
+
+   // .... code removed for clarity purpose ....
+
+ public override void Execute(ProcessStepProperties properties)
+ {
+    if (PrequisitesPresent(properties))
+    {
+       AddAssociatedMemberGroups(properties, _key);
+       TransactionLogger.Log(this);
+    }
+ }
+
+ public override void RollBack(ProcessStepProperties properties)
+ {
+   //Roll back implementation
+ }
+}
+</code></pre>
+<p style="text-align:justify;">So, as a recap, we defined an interface called IProcessStep that contains the declaration of Execute and RollBack methods.</p>
+<p style="text-align:justify;">Other classes (specific to process steps) inherit from IProcessStep and provide an implementation for Execute and RollBack methods. Execute method of every process step class also add check point after successful execution of the step using TransactionLogger.Log method.</p>
+<p style="text-align:justify;">Now having all this setup we need some sort of controller class that could use this implementation. This could be used from within the workflow as well but in my demonstration I'm using a class that implements the Queue and in that queue we can insert separate steps and then Process the queue in the end. Here is the implementation of my controller class.</p>
+<pre><code class="chsarp">
+public class TestProcessSteps
+{
+    private Queue _queue = new Queue();
+    private ProcessStepProperties _properties = new ProcessStepProperties();
+
+    public void Initialize(ProcessStepProperties properties)
+    {
+       _properties = properties;
+    }
+    public void Enqueue(IProcessStep step)
+    {
+       this._queue.Enqueue(step);
+    }
+
+    public void ProcessQueue()
+    {
+      try
+      {
+         while (_queue.Count &gt; 0)
+         {
+            //pick item from the queue and invoke execute method
+            var step = _queue.Dequeue();
+            step.Execute(_properties);
+         }
+       }
+       catch (Exception ex)
+       {
+          //roll back
+          TransactionLogger.RollBack(_properties);
+       }
+    }
+ }
+</code></pre>
+<p style="text-align:justify;">If you notice above, if anything fails (i.e, exception occurs), RollBack method is invoked from TransactionLogger class (that basically pops up items from the stack and invoke rollback method on respective step).</p>
+<p style="text-align:justify;">Finally, here is how we test our implementation.</p>
+<pre><code class="chsarp">
+//Instantiate TestProcessStep class
+TestProcessSteps testclient = new TestProcessSteps();
+
+//setup properties
+properties = InitializeProcessProperties(item);
+
+//Invoke Initialize method on TestProcessSteps class (that basically initializes ProcessProperties)
+testclient.Initialize(properties);
+
+//Insert steps into Queue
+testclient.Enqueue(new CreateSiteStep());
+testclient.Enqueue(new SetSitePermissionGroupStep(&quot;MemberGroup&quot;));
+testclient.Enqueue(new SetSitePermissionGroupStep(&quot;OwnerGroup&quot;));
+
+//Process the Queue (that basically takes items from queue and invoke Execute methods on respective steps)
+testclient.ProcessQueue();
+
+</code></pre>
+<p style="text-align:justify;">Note that during the enqueue, I'm adding SetSitePermissionGroupStep step two times with different parameters - in this way you can actually define atomic steps also using the same class.</p>
+<p style="text-align:justify;">Hope it gives the general idea about my thought behind the implementation. Don't hesitate to provide any feedback or issues if you find any in my solution.</p>
+<p style="text-align:justify;">Thanks for taking time to read this long post :)</p>
+
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+    var disqus_shortname = 'sanjaybhagia';
+    var disqus_identifier = 'creating-loosely-coupled-and-generic-process-steps-implementation';
+    var disqus_title = 'Creating loosely coupled and generic process steps implementation';
+    var disqus_url = 'http://sanjaybhagia.com/2013/05/creating-loosely-coupled-and-generic-process-steps-implementation';
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                </div>
+                        </div>
+                </div>
+                
+                <hr>
+                
+                <!-- Footer -->
+                <footer>
+                        <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                <ul class="list-inline text-center">
+                        <li>
+                        <a href="https://twitter.com/bhagiasanjay">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://github.com/sanjaybhagia">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                        <li>
+                        <a href="https://www.linkedin.com/in/sanjaybhagia/">
+                                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                                </span>
+                        </a>
+                        </li>
+                </ul>
+                <p class="copyright text-muted">                        
+                        This work is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" rel="license">Creative Commons Attribution 4.0 International License</a>.
+                        <br />
+                        <a href="/rss.xml"><i class="fa fa-rss"></i> RSS Feed</a> | <a href="/feed.xml"><i class="fa fa-rss"></i> Atom Feed</a>
+                        <br />
+                        <a href="https://github.com/sanjaybhagia/sanjaybhagia.com"><i class="fa fa-github"></i> This Site on GitHub</a> | <a href="https://wyam.io">Generated by Wyam</a>
+                </p>
+                </div>
+        </div>
+</div>
+                </footer> 
+
+                
+                <script>hljs.initHighlightingOnLoad();</script>
+
+                        <script type="text/javascript">                
+                                // Header background                        
+                                var colors = Please.make_color({
+                                        colors_returned: 3,
+                                        saturation: .6
+                                });
+                                var t = new Trianglify({
+                                        x_gradient: colors,
+                                        y_gradient: ["#FFFFFF"]
+                                });
+                                var header = document.getElementById("intro-header");
+                                var pattern = t.generate(header.clientWidth, header.clientHeight);
+                                header.setAttribute('style', 'background-image: ' + pattern.dataUrl);                        
+                        </script>
+        </body>
+</html>

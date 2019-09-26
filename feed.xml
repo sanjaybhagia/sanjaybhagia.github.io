@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>http://sanjaybhagia.com/</id>
+	<title>Sanjay Bhagia's Blog</title>
+	<link rel="self" href="http://sanjaybhagia.com/" />
+	<rights>2019</rights>
+	<updated>2019-09-26T01:58:10Z</updated>
+	<subtitle>Sanjay Bhagia</subtitle>
+	<entry>
+		<id>http://sanjaybhagia.com/2019/02/microsoft-openhack-devops-stockholm</id>
+		<title>Microsoft OpenHack DevOps - Stockholm</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2019/02/microsoft-openhack-devops-stockholm" />
+		<link rel="enclosure" type="image" href="http://sanjaybhagia.com/images/main.png" />
+		<updated>2019-02-11T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2018/12/using-postman-for-integration-tests</id>
+		<title>Using Postman for Integration Tests</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2018/12/using-postman-for-integration-tests" />
+		<updated>2018-12-11T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2018/11/accessing-wcf-service-via-azure-service-bus-relay-with-net-core</id>
+		<title>Accessing WCF Service via Azure Service Bus Relay with .NET Core</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2018/11/accessing-wcf-service-via-azure-service-bus-relay-with-net-core" />
+		<updated>2018-11-28T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2018/11/accessing-azure-analysis-services-models-using-net-core</id>
+		<title>Accessing Azure Analysis Services Models using .NET Core</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2018/11/accessing-azure-analysis-services-models-using-net-core" />
+		<updated>2018-11-12T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2018/10/are-you-keeping-your-secrets-secret</id>
+		<title>Are you keeping your secrets secret?</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2018/10/are-you-keeping-your-secrets-secret" />
+		<updated>2018-10-25T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2015/01/identifying-the-owner-of-personal-sites-in-sharepoint</id>
+		<title>Identifying the owner of personal sites in SharePoint</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2015/01/identifying-the-owner-of-personal-sites-in-sharepoint" />
+		<updated>2015-01-22T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2015/01/deleting-managed-metadata-fields-via-powershell</id>
+		<title>Deleting Managed Metadata Fields via PowerShell</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2015/01/deleting-managed-metadata-fields-via-powershell" />
+		<updated>2015-01-08T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2014/08/using-httphandler-to-deal-with-cross-domain-requests-from-angularjs-app-for-sharepoint-on-premises</id>
+		<title>Using HttpHandler to deal with cross-domain requests from AngularJS app for SharePoint on-premises</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2014/08/using-httphandler-to-deal-with-cross-domain-requests-from-angularjs-app-for-sharepoint-on-premises" />
+		<updated>2014-08-16T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2013/11/the-specified-program-requires-a-new-version-of-windows-exception-from-hresult0x8007047e</id>
+		<title>The specified program requires a new version of Windows. (Exception from HRESULT:0x8007047E)</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2013/11/the-specified-program-requires-a-new-version-of-windows-exception-from-hresult0x8007047e" />
+		<updated>2013-11-23T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2013/10/associating-oob-approval-workflow-with-custom-list-for-different-locale-lcids</id>
+		<title>Associating OOB Approval workflow with custom list for different Locale (LCIDs)</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2013/10/associating-oob-approval-workflow-with-custom-list-for-different-locale-lcids" />
+		<updated>2013-10-20T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2013/06/updates-are-currently-disabled-in-get-requests-exception-while-provisioning-multiple-site-collections</id>
+		<title>Updates are currently disabled in GET requests exception while provisioning multiple site collections</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2013/06/updates-are-currently-disabled-in-get-requests-exception-while-provisioning-multiple-site-collections" />
+		<updated>2013-06-02T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2013/05/incorrect-values-for-user-fields-while-copying-list-items-from-one-site-collection-to-another</id>
+		<title>Incorrect values for User Fields while copying list items from one site collection to another</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2013/05/incorrect-values-for-user-fields-while-copying-list-items-from-one-site-collection-to-another" />
+		<updated>2013-05-25T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2013/05/creating-loosely-coupled-and-generic-process-steps-implementation</id>
+		<title>Creating loosely coupled and generic process steps implementation</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2013/05/creating-loosely-coupled-and-generic-process-steps-implementation" />
+		<updated>2013-05-02T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2013/03/consuming-content-type-hub-in-custom-web-templates</id>
+		<title>Consuming Content Type Hub in custom web templates</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2013/03/consuming-content-type-hub-in-custom-web-templates" />
+		<updated>2013-03-21T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2013/03/paged-custom-search-query-using-keywordquery</id>
+		<title>Paged Custom Search Query using KeywordQuery</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2013/03/paged-custom-search-query-using-keywordquery" />
+		<updated>2013-03-14T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2013/03/update-personal-site-property-in-user-profile</id>
+		<title>Update Personal Site Property in User Profile</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2013/03/update-personal-site-property-in-user-profile" />
+		<updated>2013-03-06T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2013/02/update-list-items-to-trigger-event-handler-through-powershell</id>
+		<title>Update list items to trigger event handler through PowerShell</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2013/02/update-list-items-to-trigger-event-handler-through-powershell" />
+		<updated>2013-02-25T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2013/01/remove-webpart-from-a-page-on-personal-site-using-delegate-control</id>
+		<title>Remove webpart from a page on Personal site using delegate control</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2013/01/remove-webpart-from-a-page-on-personal-site-using-delegate-control" />
+		<updated>2013-01-12T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2012/12/adding-local-variables-on-a-page-as-a-user-control</id>
+		<title>Adding local variables on a page as a user control</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2012/12/adding-local-variables-on-a-page-as-a-user-control" />
+		<updated>2012-12-20T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+	<entry>
+		<id>http://sanjaybhagia.com/2012/12/alloweveryoneviewitems-enable-anonymous-access-to-files-in-list</id>
+		<title>AllowEveryoneViewItems - Enable anonymous access to files in list</title>
+		<author>
+			<name>sanjaybhagia</name>
+		</author>
+		<link href="http://sanjaybhagia.com/2012/12/alloweveryoneviewitems-enable-anonymous-access-to-files-in-list" />
+		<updated>2012-12-12T00:00:00Z</updated>
+		<summary>Sanjay Bhagia</summary>
+	</entry>
+</feed>
