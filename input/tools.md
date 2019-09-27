@@ -21,13 +21,10 @@ Here is the list of tools that I use for my work.
 - Shoulder bag
 - Bose QC 35 over-the-ear headphones
 - Apple Airpods 2 - in-ear
-- Chair
-- Desk 
-- Monitor
 - Amplifi Home router
 
 ### Developer Tools 
-- [Visual Studio]
+- Visual Studio
 - [Visual Studio Code]
 - Snagit
 - Beyond Compare
