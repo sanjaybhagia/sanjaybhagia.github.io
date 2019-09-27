@@ -1,0 +1,73 @@
+#recipe Blog
+#t CleanBlog
+//#n Wyam.Images
+#n Wyam.Markdown
+
+
+// Customize your settings and add new ones here
+//Settings[Keys.Host] = "host.com";
+//Settings[BlogKeys.Title] = "Sanjay Bhagia's";
+//Settings[BlogKeys.Description] = "Welcome!";
+
+// Add any pipeline customizations here
+
+//System.Globalization.CultureInfo.DefaultThreadCurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("sv-SE");
+Settings[Keys.Host] = "sanjaybhagia.com";
+Settings["Title"] = "Sanjay Bhagia's Blog";
+Settings["Description"] = "Sanjay Bhagia";
+Settings["Intro"] = "This is my blog, where I write about stuff that interests me such as .NET, Azure, CI/CD and technology in general.";
+Settings[BlogKeys.PostsPath] = "posts";
+Settings[Keys.LinkLowercase] = true;
+Settings[BlogKeys.IncludeDateInPostPath] = true;
+Settings[BlogKeys.RssPath] = "rss.xml";
+Settings[BlogKeys.AtomPath] = "feed.xml";
+Settings[BlogKeys.IndexPageSize] = 4;
+Settings[BlogKeys.IndexFullPosts] = true;
+Settings[BlogKeys.ArchivePageSize] = 10;
+//Settings[BlogKeys.Image] = "/images/home-bg.jpg";
+//Settings["OgImage"] = "/images/og-image.png";
+
+//Pipelines.Add("Images",
+//  ReadFiles("*")
+//    .Where(x => new[] { ".jpg", ".jpeg", ".gif", ".png"}.Contains(x.Path.Extension)),
+//  Image()
+//    .SetJpegQuality(100).Resize(400,209).SetSuffix("-thumb"),
+//  WriteFiles("*")
+//);
+
+Pipelines.Add("Feed2",
+    Documents(Blog.BlogPosts),
+    GenerateFeeds()
+        .WithRssPath(_ => "rss.xml")
+        .WithAtomPath(_ => "feed.xml"),
+    WriteFiles()
+);
+
+int blogPostsIndex = Pipelines.IndexOf(Blog.BlogPosts);
+Pipelines.Remove(Blog.BlogPosts);
+Pipelines.Insert(
+    blogPostsIndex,
+    Blog.BlogPosts,
+    (IPipeline)new Wyam.Web.Pipelines.BlogPosts(
+        "BlogPosts",
+        new Wyam.Web.Pipelines.BlogPostsSettings
+        {
+            PublishedKey = BlogKeys.Published,
+            MarkdownConfiguration = ctx => ctx.String(BlogKeys.MarkdownConfiguration),
+            MarkdownExtensionTypes = ctx => ctx.List<Type>(BlogKeys.MarkdownExtensionTypes),
+            ProcessIncludes = (doc, ctx) => doc.Bool(BlogKeys.ProcessIncludes),
+            IncludeDateInPostPath = ctx => true,
+            PostsPath = ctx => ctx.Module.GetType().Name == "Meta" ? ctx.DirectoryPath(BlogKeys.PostsPath).Combine("..") : ctx.DirectoryPath(BlogKeys.PostsPath).FullPath
+        }));
+
+// Adds files to the root for each blog post
+Pipelines.Add("RootPosts",
+    Documents(Blog.RenderBlogPosts),
+    WriteFiles(@doc.FilePath(Keys.RelativeFilePath).FileName.ChangeExtension(".html")));
+
+// Adds folders to the root with nested index pages for each blog post (to support a trailing slash)
+/*
+Pipelines.Add("RootPosts",
+    Documents(Blog.RenderBlogPosts),
+    WriteFiles(new DirectoryPath(@doc.FilePath(Keys.RelativeFilePath).FileNameWithoutExtension.FullPath).CombineFile("index.html")));
+*/

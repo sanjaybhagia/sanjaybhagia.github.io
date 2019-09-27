@@ -1,0 +1,13 @@
+{
+    "name": "bhagias-blog",
+    "version": "0.0.1",    
+    "license": "MIT",    
+    "scripts": {
+        "postinstall": "dotnet tool install -g Wyam.Tool",
+        "build" : "wyam --recipe Blog --theme CleanBlog --update-packages",
+        "start": "wyam --recipe Blog --theme CleanBlog --update-packages --preview --watch",
+        "predeploy": "npm run build",
+        "deploy": "./node_modules/.bin/netlify deploy --dir=output --prod"
+    }
+  }
+  
