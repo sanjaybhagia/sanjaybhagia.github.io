@@ -8,8 +8,6 @@ guid: http://sanjaybhagia.wordpress.com/?p=122
 permalink: /2012/12/20/adding-local-variables-on-a-page-as-a-user-control/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
-dsq_thread_id:
-  - "3072739120"
 disqus_identifier: https://sanjaybhagia.com/2012/12/adding-local-variables-on-a-page-as-a-user-control/
 categories:
   - JavaScript

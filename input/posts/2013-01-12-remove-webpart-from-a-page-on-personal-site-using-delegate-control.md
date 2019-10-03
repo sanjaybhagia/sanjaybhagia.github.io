@@ -8,8 +8,6 @@ guid: http://sanjaybhagia.wordpress.com/?p=108
 permalink: /2013/01/12/remove-webpart-from-a-page-on-personal-site-using-delegate-control/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
-dsq_thread_id:
-  - "2795716839"
 disqus_identifier: https://sanjaybhagia.com/2013/01/remove-webpart-from-a-page-on-personal-site-using-delegate-control/
 categories:
   - 'C#'

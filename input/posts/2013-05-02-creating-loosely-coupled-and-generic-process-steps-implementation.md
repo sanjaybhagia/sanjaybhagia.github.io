@@ -8,8 +8,7 @@ guid: http://sanjaybhagia.wordpress.com/?p=225
 permalink: /2013/05/02/creating-loosely-coupled-and-generic-process-steps-implementation/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
-dsq_thread_id:
-  - "2863786209"
+disqus_identifier: https://www.sanjaybhagia.com/2013/05/02/creating-loosely-coupled-and-generic-process-steps-implementation/
 categories:
   - 'C#'
   - SharePoint

@@ -6,8 +6,7 @@ author: sanjaybhagia
 layout: post
 guid: http://sanjaybhagia.wordpress.com/?p=211
 permalink: /2013/03/21/consuming-content-type-hub-in-custom-web-templates/
-dsq_thread_id:
-  - "2861168841"
+disqus_identifier: https://www.sanjaybhagia.com/2013/03/21/consuming-content-type-hub-in-custom-web-templates/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
 categories:

@@ -8,8 +8,6 @@ guid: http://www.sanjaybhagia.com/?p=354
 permalink: /2015/01/22/identifying-the-owner-of-personal-sites-in-sharepoint/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
-dsq_thread_id:
-  - "3444524332"
 disqus_identifier: https://www.sanjaybhagia.com/2015/01/22/identifying-the-owner-of-personal-sites-in-sharepoint/
 categories:
   - PowerShell

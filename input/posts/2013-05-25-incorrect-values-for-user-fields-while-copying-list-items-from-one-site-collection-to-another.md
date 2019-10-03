@@ -6,8 +6,7 @@ author: sanjaybhagia
 layout: post
 guid: http://sanjaybhagia.wordpress.com/?p=250
 permalink: /2013/05/25/incorrect-values-for-user-fields-while-copying-list-items-from-one-site-collection-to-another/
-dsq_thread_id:
-  - "2860829536"
+disqus_identifier: https://www.sanjaybhagia.com/2013/05/25/incorrect-values-for-user-fields-while-copying-list-items-from-one-site-collection-to-another/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
 categories:

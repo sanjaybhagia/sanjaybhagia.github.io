@@ -10,12 +10,10 @@ medium_post:
   - 'O:11:"Medium_Post":11:{s:16:"author_image_url";s:69:"https://cdn-images-1.medium.com/fit/c/400/400/0*ERb6Is_QqdMUQz6C.jpeg";s:10:"author_url";s:32:"https://medium.com/@bhagiasanjay";s:11:"byline_name";N;s:12:"byline_email";N;s:10:"cross_link";s:2:"no";s:2:"id";s:12:"a80fa315af70";s:21:"follower_notification";s:3:"yes";s:7:"license";s:19:"all-rights-reserved";s:14:"publication_id";s:2:"-1";s:6:"status";s:5:"draft";s:3:"url";s:45:"https://medium.com/@bhagiasanjay/a80fa315af70";}'
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
-dsq_thread_id:
-  - "7039049843"
+disqus_identifier: https://www.sanjaybhagia.com/2018/11/12/accessing-azure-analysis-services-models-using-net-core/
 categories:
   - Azure
   - 'C#'
-disqus_identifier: https://www.sanjaybhagia.com/2018/11/12/accessing-azure-analysis-services-models-using-net-core/
 tags:
   - .net-core
   - adal.net

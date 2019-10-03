@@ -6,11 +6,7 @@ author: sanjaybhagia
 layout: post
 guid: http://sanjaybhagia.wordpress.com/?p=188
 permalink: /2013/03/14/paged-custom-search-query-using-keywordquery/
-dsq_thread_id:
-  - "3115477229"
 disqus_identifier: https://www.sanjaybhagia.com/2013/03/14/paged-custom-search-query-using-keywordquery/
-layers:
-  - 'a:1:{s:9:"video-url";s:0:"";}'
 categories:
   - PowerShell
   - SharePoint

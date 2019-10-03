@@ -1,13 +1,8 @@
 ---
-Title: 'Microsoft OpenHack DevOps - Stockholm'
+Title: 'Mirating from wordpress to wyam'
 date: 2019-10-05
 author: sanjaybhagia
 layout: post
-classic-editor-remember:
-  - block-editor
-layers:
-  - 'a:1:{s:9:"video-url";s:0:"";}'
-image: /images/main.png
 categories:
   - Blog
   - Hosting

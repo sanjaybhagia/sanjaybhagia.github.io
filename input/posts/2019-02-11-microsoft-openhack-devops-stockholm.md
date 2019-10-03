@@ -6,10 +6,7 @@ author: sanjaybhagia
 layout: post
 guid: https://www.sanjaybhagia.com/?p=735
 permalink: /2019/02/11/microsoft-openhack-devops-stockholm/
-classic-editor-remember:
-  - block-editor
-layers:
-  - 'a:1:{s:9:"video-url";s:0:"";}'
+disqus_identifier: https://www.sanjaybhagia.com/2019/02/11/microsoft-openhack-devops-stockholm/
 image: /images/main.png
 categories:
   - Azure

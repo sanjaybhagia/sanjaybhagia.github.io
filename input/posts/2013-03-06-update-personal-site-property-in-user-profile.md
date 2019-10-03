@@ -8,8 +8,7 @@ guid: http://sanjaybhagia.wordpress.com/?p=181
 permalink: /2013/03/06/update-personal-site-property-in-user-profile/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
-dsq_thread_id:
-  - "2461516794"
+disqus_identifier: https://www.sanjaybhagia.com/2013/03/06/update-personal-site-property-in-user-profile/
 categories:
   - PowerShell
   - SharePoint

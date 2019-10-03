@@ -6,8 +6,7 @@ author: sanjaybhagia
 layout: post
 guid: http://sanjaybhagia.wordpress.com/?p=269
 permalink: /2013/06/02/updates-are-currently-disabled-in-get-requests-exception-while-provisioning-multiple-site-collections/
-dsq_thread_id:
-  - "2636422758"
+disqus_identifier: https://www.sanjaybhagia.com/2013/06/02/updates-are-currently-disabled-in-get-requests-exception-while-provisioning-multiple-site-collections/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
 categories:

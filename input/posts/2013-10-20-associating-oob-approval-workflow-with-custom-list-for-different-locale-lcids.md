@@ -6,8 +6,7 @@ author: sanjaybhagia
 layout: post
 guid: http://sanjaybhagia.wordpress.com/?p=282
 permalink: /2013/10/20/associating-oob-approval-workflow-with-custom-list-for-different-locale-lcids/
-dsq_thread_id:
-  - "2046834564"
+disqus_identifier: https://www.sanjaybhagia.com/2013/10/20/associating-oob-approval-workflow-with-custom-list-for-different-locale-lcids/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
 categories:

@@ -8,8 +8,6 @@ guid: http://www.sanjaybhagia.com/?p=344
 permalink: /2015/01/08/deleting-managed-metadata-fields-via-powershell/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
-dsq_thread_id:
-  - "5583717703"
 disqus_identifier: https://www.sanjaybhagia.com/2015/01/08/deleting-managed-metadata-fields-via-powershell/
 categories:
   - PowerShell

@@ -1,15 +1,7 @@
 #recipe Blog
 #t CleanBlog
-//#n Wyam.Images
 #n Wyam.Markdown
-
-
-// Customize your settings and add new ones here
-//Settings[Keys.Host] = "host.com";
-//Settings[BlogKeys.Title] = "Sanjay Bhagia's";
-//Settings[BlogKeys.Description] = "Welcome!";
-
-// Add any pipeline customizations here
+//#n Wyam.Images -p
 
 //System.Globalization.CultureInfo.DefaultThreadCurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("sv-SE");
 Settings[Keys.Host] = "sanjaybhagia.com";
@@ -27,6 +19,8 @@ Settings[BlogKeys.ArchivePageSize] = 10;
 //Settings[BlogKeys.Image] = "/images/home-bg.jpg";
 //Settings["OgImage"] = "/images/og-image.png";
 
+// Add any pipeline customizations here
+
 //Pipelines.Add("Images",
 //  ReadFiles("*")
 //    .Where(x => new[] { ".jpg", ".jpeg", ".gif", ".png"}.Contains(x.Path.Extension)),
@@ -43,7 +37,10 @@ Pipelines.Add("Feed2",
     WriteFiles()
 );
 
+
+
 int blogPostsIndex = Pipelines.IndexOf(Blog.BlogPosts);
+Console.WriteLine(String.Join(",", blogPostsIndex));
 Pipelines.Remove(Blog.BlogPosts);
 Pipelines.Insert(
     blogPostsIndex,
@@ -59,6 +56,16 @@ Pipelines.Insert(
             IncludeDateInPostPath = ctx => true,
             PostsPath = ctx => ctx.Module.GetType().Name == "Meta" ? ctx.DirectoryPath(BlogKeys.PostsPath).Combine("..") : ctx.DirectoryPath(BlogKeys.PostsPath).FullPath
         }));
+
+Pipelines[Blog.BlogPosts].Append(
+  Meta(Keys.RelativeFilePath, (doc, ctx) =>
+  {
+        DateTime published = doc.Get<DateTime>(BlogKeys.Published);
+        string fileName =  doc.FilePath(Keys.SourceFileName).ChangeExtension("html").FullPath.Substring(11); 
+        var fullPath =  $"{ctx.DirectoryPath(BlogKeys.PostsPath).FullPath}/{published:yyyy}/{published:MM}/{published:dd}/{fileName}";
+        //Console.WriteLine("Full path: " + fullPath.Substring(6));
+        return fullPath.Substring(6);
+    }));
 
 // Adds files to the root for each blog post
 Pipelines.Add("RootPosts",

@@ -8,8 +8,6 @@ guid: http://sanjaybhagia.wordpress.com/?p=90
 permalink: /2012/12/12/alloweveryoneviewitems-enable-anonymous-access-to-files-in-list/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
-dsq_thread_id:
-  - "2931252379"
 disqus_identifier: https://sanjaybhagia.com/2012/12/alloweveryoneviewitems-enable-anonymous-access-to-files-in-list
 categories:
   - 'C#'

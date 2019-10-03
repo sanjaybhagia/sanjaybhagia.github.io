@@ -8,9 +8,7 @@ guid: http://sanjaybhagia.wordpress.com/?p=165
 permalink: /2013/02/25/update-list-items-to-trigger-event-handler-through-powershell/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
-dsq_thread_id:
-  - "2819223034"
-disqus_identifier: https://sanjaybhagia.com/2013/01/remove-webpart-from-a-page-on-personal-site-using-delegate-control/
+disqus_identifier: https://sanjaybhagia.com/2013/02/25/update-list-items-to-trigger-event-handler-through-powershell/
 categories:
   - PowerShell
   - SharePoint

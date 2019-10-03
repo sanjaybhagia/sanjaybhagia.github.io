@@ -6,8 +6,6 @@ author: sanjaybhagia
 layout: post
 guid: http://sanjaybhagia.wordpress.com/?p=291
 permalink: /2013/11/23/the-specified-program-requires-a-new-version-of-windows-exception-from-hresult0x8007047e/
-dsq_thread_id:
-  - "2046833074"
 disqus_identifier: https://www.sanjaybhagia.com/2013/11/23/the-specified-program-requires-a-new-version-of-windows-exception-from-hresult0x8007047e/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'

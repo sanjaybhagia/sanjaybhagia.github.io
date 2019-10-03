@@ -10,8 +10,6 @@ geo_public:
   - "0"
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
-dsq_thread_id:
-  - "5578412071"
 disqus_identifier: http://sanjaybhagia.com/using-httphandler-go-around-cross-domain-requests-angularjs-app-sharepoint/
 categories:
   - 'C#'
