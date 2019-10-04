@@ -4,7 +4,6 @@ title: Updates are currently disabled in GET requests exception while provisioni
 date: 2013-06-02T18:44:45+02:00
 author: sanjaybhagia
 layout: post
-guid: http://sanjaybhagia.wordpress.com/?p=269
 permalink: /2013/06/02/updates-are-currently-disabled-in-get-requests-exception-while-provisioning-multiple-site-collections/
 disqus_identifier: https://www.sanjaybhagia.com/2013/06/02/updates-are-currently-disabled-in-get-requests-exception-while-provisioning-multiple-site-collections/
 layers:

@@ -36,3 +36,16 @@ I have Github Action setup which does the following:
   - push changes
   - send out an email of the build result.
   - wife off cloudflare cache
+
+
+  Website performance
+  https://developers.google.com/speed/pagespeed/insights/?url=sanjaybhagia.com
+
+  Never realized, it's so bad !!
+
+  Deploying the site as it was (after fixing few thins) to netlify
+
+  Improvement I: Fixing images (I moved the highest resolution images from my wordpress export - so reduced the image size) and here are the results. 
+
+
+  Making further changes

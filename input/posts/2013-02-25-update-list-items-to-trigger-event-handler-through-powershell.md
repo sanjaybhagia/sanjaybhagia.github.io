@@ -4,7 +4,6 @@ title: Update list items to trigger event handler through PowerShell
 date: 2013-02-25T09:50:51+02:00
 author: sanjaybhagia
 layout: post
-guid: http://sanjaybhagia.wordpress.com/?p=165
 permalink: /2013/02/25/update-list-items-to-trigger-event-handler-through-powershell/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'

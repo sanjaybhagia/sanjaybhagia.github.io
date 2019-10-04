@@ -4,7 +4,6 @@ title: Creating loosely coupled and generic process steps implementation
 date: 2013-05-02T19:42:31+02:00
 author: sanjaybhagia
 layout: post
-guid: http://sanjaybhagia.wordpress.com/?p=225
 permalink: /2013/05/02/creating-loosely-coupled-and-generic-process-steps-implementation/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'

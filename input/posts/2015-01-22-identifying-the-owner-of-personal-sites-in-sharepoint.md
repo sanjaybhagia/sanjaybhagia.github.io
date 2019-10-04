@@ -4,7 +4,7 @@ title: Identifying the owner of personal sites in SharePoint
 date: 2015-01-22T16:20:20+02:00
 author: sanjaybhagia
 layout: post
-guid: http://www.sanjaybhagia.com/?p=354
+guid: https://www.sanjaybhagia.com/?p=354
 permalink: /2015/01/22/identifying-the-owner-of-personal-sites-in-sharepoint/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'

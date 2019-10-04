@@ -4,7 +4,7 @@ title: Accessing Azure Analysis Services Models using .NET Core
 date: 2018-11-12T14:31:12+02:00
 author: sanjaybhagia
 layout: post
-guid: http://www.sanjaybhagia.com/?p=586
+guid: https://www.sanjaybhagia.com/?p=586
 permalink: /2018/11/12/accessing-azure-analysis-services-models-using-net-core/
 medium_post:
   - 'O:11:"Medium_Post":11:{s:16:"author_image_url";s:69:"https://cdn-images-1.medium.com/fit/c/400/400/0*ERb6Is_QqdMUQz6C.jpeg";s:10:"author_url";s:32:"https://medium.com/@bhagiasanjay";s:11:"byline_name";N;s:12:"byline_email";N;s:10:"cross_link";s:2:"no";s:2:"id";s:12:"a80fa315af70";s:21:"follower_notification";s:3:"yes";s:7:"license";s:19:"all-rights-reserved";s:14:"publication_id";s:2:"-1";s:6:"status";s:5:"draft";s:3:"url";s:45:"https://medium.com/@bhagiasanjay/a80fa315af70";}'
@@ -142,7 +142,7 @@ tags:
 <!-- /wp:paragraph -->
 
 <!-- wp:image {"id":607,"linkDestination":"custom"} -->
-<figure class="wp-block-image"><a href="https://github.com/sanjaybhagia/azure-analysis-services-netcore-sample/blob/master/ConsoleApp/ConsoleApp/Program.cs"><img src="/images/image-12.png" alt="" class="wp-image-607"/></a><figcaption>Method to acquire token from Azure AD to access analysis services</figcaption></figure>
+<figure class="wp-block-image"><a href="https://github.com/sanjaybhagia/azure-analysis-services-netcore-sample/blob/master/ConsoleApp/ConsoleApp/Program.cs"><img src="/images/image-12.webp" alt="" class="wp-image-607"/></a><figcaption>Method to acquire token from Azure AD to access analysis services</figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->

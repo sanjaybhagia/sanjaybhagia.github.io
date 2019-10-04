@@ -4,7 +4,6 @@ title: Using HttpHandler to deal with cross-domain requests from AngularJS app f
 date: 2014-08-16T14:03:48+02:00
 author: sanjaybhagia
 layout: post
-guid: http://sanjaybhagia.wordpress.com/?p=316
 permalink: /2014/08/16/using-httphandler-to-deal-with-cross-domain-requests-from-angularjs-app-for-sharepoint-on-premises/
 geo_public:
   - "0"

@@ -4,7 +4,6 @@ title: Remove webpart from a page on Personal site using delegate control
 date: 2013-01-12T12:06:56+02:00
 author: sanjaybhagia
 layout: post
-guid: http://sanjaybhagia.wordpress.com/?p=108
 permalink: /2013/01/12/remove-webpart-from-a-page-on-personal-site-using-delegate-control/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'

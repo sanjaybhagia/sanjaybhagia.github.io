@@ -4,7 +4,7 @@ title: Deleting Managed Metadata Fields via PowerShell
 date: 2015-01-08T16:09:50+02:00
 author: sanjaybhagia
 layout: post
-guid: http://www.sanjaybhagia.com/?p=344
+guid: https://www.sanjaybhagia.com/?p=344
 permalink: /2015/01/08/deleting-managed-metadata-fields-via-powershell/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
@@ -17,7 +17,7 @@ tags:
   - Provisioning
 ---
 <strong>Scenario</strong>
-When you provision a Managed Metadata (Taxonomy) field in SharePoint, it creates a hidden field (of type Note) along with the main taxonomy field. What happens when you delete that field? You would expect the other one to be deleted as well, right? Not that easy <img class="wp-smiley" src="http://web.archive.org/web/20160121231552im_/http://sanjaybhagia.com/wp-includes/images/smilies/icon_smile.gif" alt=":)" />
+When you provision a Managed Metadata (Taxonomy) field in SharePoint, it creates a hidden field (of type Note) along with the main taxonomy field. What happens when you delete that field? You would expect the other one to be deleted as well, right? Not that easy :)
 
 SharePoint for some reason doesn’t delete that hidden field. So when you provision the field again with the same name, it simply increments the number for the hidden field. Let’s say your field is called MyTax1. The hidden field will be named MyTax1_0. Now if MyTax1_0 already exists, SharePoint will create MyTax1_1 and so on. This is applicable when you working from the interface with OOB functionality.
 

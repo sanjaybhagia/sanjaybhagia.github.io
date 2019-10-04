@@ -4,7 +4,6 @@ title: The specified program requires a new version of Windows. (Exception from 
 date: 2013-11-23T16:08:11+02:00
 author: sanjaybhagia
 layout: post
-guid: http://sanjaybhagia.wordpress.com/?p=291
 permalink: /2013/11/23/the-specified-program-requires-a-new-version-of-windows-exception-from-hresult0x8007047e/
 disqus_identifier: https://www.sanjaybhagia.com/2013/11/23/the-specified-program-requires-a-new-version-of-windows-exception-from-hresult0x8007047e/
 layers:

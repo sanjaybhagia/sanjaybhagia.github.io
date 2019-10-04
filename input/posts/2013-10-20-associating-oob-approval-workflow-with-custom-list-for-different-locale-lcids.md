@@ -4,7 +4,6 @@ title: Associating OOB Approval workflow with custom list for different Locale (
 date: 2013-10-20T16:55:50+02:00
 author: sanjaybhagia
 layout: post
-guid: http://sanjaybhagia.wordpress.com/?p=282
 permalink: /2013/10/20/associating-oob-approval-workflow-with-custom-list-for-different-locale-lcids/
 disqus_identifier: https://www.sanjaybhagia.com/2013/10/20/associating-oob-approval-workflow-with-custom-list-for-different-locale-lcids/
 layers:

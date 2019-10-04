@@ -4,7 +4,6 @@ title: Update Personal Site Property in User Profile
 date: 2013-03-06T11:01:28+02:00
 author: sanjaybhagia
 layout: post
-guid: http://sanjaybhagia.wordpress.com/?p=181
 permalink: /2013/03/06/update-personal-site-property-in-user-profile/
 layers:
   - 'a:1:{s:9:"video-url";s:0:"";}'
