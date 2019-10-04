@@ -7,7 +7,6 @@ layout: post
 guid: https://www.sanjaybhagia.com/?p=735
 permalink: /2019/02/11/microsoft-openhack-devops-stockholm/
 disqus_identifier: https://www.sanjaybhagia.com/2019/02/11/microsoft-openhack-devops-stockholm/
-image: /images/main.png
 categories:
   - Azure
   - Hackathon
