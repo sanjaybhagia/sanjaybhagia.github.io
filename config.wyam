@@ -63,7 +63,7 @@ Pipelines[Blog.BlogPosts].Append(
         DateTime published = doc.Get<DateTime>(BlogKeys.Published);
         string fileName =  doc.FilePath(Keys.SourceFileName).ChangeExtension("html").FullPath.Substring(11); 
         var fullPath =  $"{ctx.DirectoryPath(BlogKeys.PostsPath).FullPath}/{published:yyyy}/{published:MM}/{published:dd}/{fileName}";
-        //Console.WriteLine("Full path: " + fullPath.Substring(6));
+        Console.WriteLine("Full path: " + fullPath.Substring(6));
         return fullPath.Substring(6);
     }));
 
