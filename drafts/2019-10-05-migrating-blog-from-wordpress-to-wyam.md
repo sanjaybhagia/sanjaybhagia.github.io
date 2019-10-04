@@ -49,3 +49,13 @@ I have Github Action setup which does the following:
 
 
   Making further changes
+
+##Caveats:
+- Issues with Disqus comments migration
+- Understandin wyam and some issues down the road
+- Setting up the CI/CD pipeline
+- Optimization
+  - Images
+  - Performance Score
+  - Migrated content markup
+- Cloudflare
