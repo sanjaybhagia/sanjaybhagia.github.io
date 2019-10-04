@@ -25,7 +25,6 @@ Here is the list of tools that I use for my work.
 ### Developer Tools 
 - Visual Studio
 - [Visual Studio Code](https://code.visualstudio.com/)
-- Snagit
 - Beyond Compare
 - Fiddler 4
 - FileZilla FTP Client

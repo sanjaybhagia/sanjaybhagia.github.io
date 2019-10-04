@@ -13,6 +13,17 @@
         <meta name="description" content="@Context.String(BlogKeys.Description)" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-47550957-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-47550957-1');
+        </script>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+
         @if (Context.String(BlogKeys.RssPath) != null) {
         <link type="application/rss+xml" rel="alternate" title="@Context.String(BlogKeys.Title)" href="@Context.GetLink(Context.String(BlogKeys.RssPath))" />
         }
