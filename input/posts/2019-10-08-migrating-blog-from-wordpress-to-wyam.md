@@ -13,7 +13,7 @@ tags:
   - wordpress
 ---
 
-I had been hosting my blog on SiteGround for a number of years now. It's been good so far, no complaints but I had been wanting to try out the static site generation engines for a while. One major reason for this is that my content is mostly static and don't really require a server side for anything as such (ok, few things but nothing that can't be achieved on client-side). I had looked at few options in the past but never really set out to do this. What pushed me to make this move is in last month, I got an email that some malicious code has been detected on my website! SiteGround did a really good job to make my website unavailable and notify me so that I could investigate, clean it up and put it back. It was a fairly smooth process but it got me thinking, this shouldn't have happened at first place. I don't really need the overhead of dealing with server side code at all. I could have drastically reduce the surface attack just by serving the static content. 
+I had been hosting my blog on SiteGround for a number of years now. It's been good so far, no complaints but I had been wanting to try out the static content generation engines for a while. One major reason for this is that my content is mostly static and don't really require a server side for anything as such (ok, few things but nothing that can't be achieved on client-side). 
 
 So, this was the tipping point for me. I had been following static site generation solutions so I was aware of this space and few options (like jeklyll, wyam etc.). I decided to go with wyam for now (it's built on top of .NET Core) but any other engine will serve similar purpose. 
 
@@ -66,8 +66,16 @@ So, this was the tipping point for me. I had been following static site generati
 Another thing I found interesting is site performance. Up until now, I didn't pay much attention to this aspect since it's not a heavy site but as I recently moved to Australia (pun intended), I started noticing how slow internet speed affects your mood :p, I decided to improve this aspect of my site. By following the approach for my new blog (without doing much optimization, I already gained a huge improvement), see it yourself: 
 
 This is my site on wordpress earlier (see both mobile and desktop speeds): 
+<p>
+  <img src="/images/old-mobile.png" width="300px">
+  <img src="/images/old-desktop.png" width="300px">
+</p>
 
 And here is my new blog (again, mobile vs desktop):
+<p>
+  <img src="/images/new-mobile.png" width="300px">
+  <img src="/images/new-desktop.png" width="300px">
+</p>
 
 That's quite impressive already. I have yet to optimize images (which should push me even further). Another thing I might work with is getting rid of disqus and using Github commenting system (since this is a dev focus blog, so it shouldn't be big of a deal to use Github issues system to serve as a comments engine).
 
