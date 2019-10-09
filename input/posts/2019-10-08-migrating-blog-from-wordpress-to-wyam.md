@@ -1,5 +1,5 @@
 ---
-Title: 'Mirating from wordpress to wyam'
+Title: 'Migrating from WordPress to Wyam'
 date: 2019-10-05
 author: sanjaybhagia
 layout: post
