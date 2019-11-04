@@ -130,7 +130,7 @@ tags:
 <!-- /wp:paragraph -->
 
 <!-- wp:heading -->
-<h2 id="mce_30">Step 4: Write the code to access data</h2>
+<h2 id="mce_30">Step 5: Write the code to access data</h2>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph -->
