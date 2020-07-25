@@ -12,14 +12,16 @@ Here is the list of tools that I use for my work.
 - [Chrome](https://www.google.com/chrome/)
 - [Office 365 Suite](https://www.office.com/) (Word, Excel, OneNote, Outlook, MS Teams etc.)
 - [Spotify](https://www.spotify.com/au/)
-- [Wunderlist](https://www.wunderlist.com/)
+- ~~[Wunderlist](https://www.wunderlist.com/)~~
+- [Microsoft To Do ](https://todo.microsoft.com/tasks)
 - [Trello](https://trello.com/)
 - [Notion](https://www.notion.so) - *Started using this recently and consolidating other tools into this one*
 
 ### Hardware
 - [iPhone 8 Plus](https://www.apple.com/shop/buy-iphone/iphone-8)
 - Lenovo X1 Extreme
-- Logitech Mouse
+- ~~Logitech Mouse~~
+- [Logitech MX Ergo](https://www.logitech.com/en-au/product/mx-ergo-wireless-trackball-mouse)
 - Bose QC 35 over-the-ear headphones
 - Apple Airpods 2 - in-ear
 - [Amplifi Home router](https://amplifi.com/amplifi-hd)
