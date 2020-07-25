@@ -21,6 +21,10 @@ tags:
   - analysis-services
   - azure
 ---
+***Update (2020-07-21):*** Microsoft recently [announced](https://azure.microsoft.com/en-us/updates/net-core-support-for-azure-analysis-services-client-libraries-is-in-preview/) the .NET Core support for Azure Analysis Services client libraries in preview ([AMO](https://www.nuget.org/packages/Microsoft.AnalysisServices.NetCore.retail.amd64) and [ADOMD.NET](https://www.nuget.org/packages/Microsoft.AnalysisServices.AdomdClient.NetCore.retail.amd64)). You can use these packages instead of the Unofficial packages which I have based this blogpost on. These packages are still in preview though, so you can't (or shoudn't) use these in your production environment. I have added another console application project in my project which you can checkout [here](https://github.com/sanjaybhagia/azure-analysis-services-netcore-sample/tree/master/ConsoleApp/ConsoleAppOfficialLibs). I just updated the reference to the nuget packge, nothing else. These libraries should work similar to the full .NET framework ones.
+
+---
+
 <!-- wp:quote {"className":"is-style-default"} -->
 <blockquote class="wp-block-quote is-style-default"><p>Azure Analysis Services is a fully managed platform as a service (PaaS) that provides enterprise-grade data models in the cloud. Use advanced mashup and modeling features to combine data from multiple data sources, define metrics, and secure your data in a single, trusted tabular semantic data model. The data model provides an easier and faster way for users to browse massive amounts of data for ad-hoc data analysis.<br/></p><cite>Refer to <a href="https://docs.microsoft.com/en-us/azure/analysis-services/analysis-services-overview" target="_blank" rel="noreferrer noopener">Microsoft official documentation</a> to read more about Azure Analysis Services</cite></blockquote>
 <!-- /wp:quote -->
