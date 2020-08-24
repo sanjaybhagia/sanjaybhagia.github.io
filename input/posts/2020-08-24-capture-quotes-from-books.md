@@ -14,7 +14,7 @@ tags:
 
 This is a two part series blogpost:<br/>
 - [Part 1: Setting up the logic app to retrieve text from an image (this)](/2020/08/24/capture-quotes-from-books)
-- Part 2: Pushing the detected text to a text file in blob storage
+- [Part 2: Pushing the detected text to a text file in blob storage](/2020/08/25/capture-quotes-from-books-2)
 
 I like reading books. Though I love technology but certain books are best suited for physical form and I'm quite open about it - whatever works. One of the good things about digital books is they make it quite trivial to highlight or take notes of our favourite quotes or sections. When it comes to physical books, there are all kind of (manual) techniques you can use to take notes. While underlying few quotes in a book I was reading the other day, I thought wouldn't it be nice if I take a picture and the quote is written to a text file somewhere as a collection for me which I can refer to later on? Of course, I didn't just put down the book right away since I was enjoying it so I carried on - I know not so easy to do. 
 
