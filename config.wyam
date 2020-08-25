@@ -2,6 +2,7 @@
 #t CleanBlog
 #n Wyam.Markdown
 //#n Wyam.Images -p
+#n Wyam.ReadingTime
 
 //System.Globalization.CultureInfo.DefaultThreadCurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("sv-SE");
 Settings[Keys.Host] = "sanjaybhagia.com";
@@ -29,6 +30,10 @@ Settings[BlogKeys.ArchivePageSize] = 10;
 //  WriteFiles("*")
 //);
 
+// If you're using the blog recipe then you can use this handy helper
+Pipelines.AddReadingTimeMeta(wordsPerMinute: 200);
+
+
 Pipelines.Add("Feed2",
     Documents(Blog.BlogPosts),
     GenerateFeeds()
@@ -54,7 +59,7 @@ Pipelines.Insert(
             MarkdownExtensionTypes = ctx => ctx.List<Type>(BlogKeys.MarkdownExtensionTypes),
             ProcessIncludes = (doc, ctx) => doc.Bool(BlogKeys.ProcessIncludes),
             IncludeDateInPostPath = ctx => true,
-            PostsPath = ctx => ctx.Module.GetType().Name == "Meta" ? ctx.DirectoryPath(BlogKeys.PostsPath).Combine("..") : ctx.DirectoryPath(BlogKeys.PostsPath).FullPath
+            PostsPath = ctx => ctx.Module.GetType().Name == "Meta" ? ctx.DirectoryPath(BlogKeys.PostsPath).Combine("..") : ctx.DirectoryPath(BlogKeys.PostsPath).FullPath            
         }));
 
 Pipelines[Blog.BlogPosts].Append(
@@ -66,6 +71,8 @@ Pipelines[Blog.BlogPosts].Append(
         Console.WriteLine("Full path: " + fullPath.Substring(6));
         return fullPath.Substring(6);
     }));
+
+Pipelines[Blog.BlogPosts].InsertBefore("WriteMetadata", new ReadingTime(wordsPerMinute: 200));
 
 // Adds files to the root for each blog post
 Pipelines.Add("RootPosts",
