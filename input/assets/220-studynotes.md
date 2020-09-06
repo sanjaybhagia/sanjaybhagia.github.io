@@ -193,7 +193,7 @@ Title: 'AZ-220: Study Notes'
 - Estimate the capacity required for each service in the solution  
 [IoT Hub Scaling](https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-scaling)  
 - Conduct performance and stress testing  
-[Accelerating IoT solution ](https://azure.microsoft.com/en-us/blog/accelerating-iot-solution-development-and-testing-with-azure-iot-device-simulation/?WT.mc_id=thomasmaurer-blog-thmaure)  
+[Accelerating IoT solution ](https://azure.microsoft.com/en-us/blog/accelerating-iot-solution-development-and-testing-with-azure-iot-device-simulation/)  
 [Azure IoT Hub Stress Test](https://github.com/IoTChinaTeam/Azure-IoTHub-StressTest)
 
 ## Implement security (15-20%)
