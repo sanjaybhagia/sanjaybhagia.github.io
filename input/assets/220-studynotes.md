@@ -1,8 +1,8 @@
 ---
 Title: 'AZ-220: Study Notes'
-layout: notes
 categories:
   - Notes
+ShowInNavbar: false
 ---
 > *Disclaimer: This is not my list entirely, I have taken references from others by searching on Internet*
 
