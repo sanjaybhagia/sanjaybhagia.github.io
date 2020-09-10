@@ -392,6 +392,16 @@ form .row:first-child .floating-label-form-group {
   margin: 20px 0 0;
 }
 
+
+.postfooter .fa-stack
+{
+  color:#c1c0c0
+}
+.postfooter .fa-stack:hover
+{
+  color:#da4453
+}
+
 footer .list-inline .fa-stack
 {
   color:#c1c0c0
@@ -461,4 +471,16 @@ img::-moz-selection {
 
 body {
   webkit-tap-highlight-color: #da4453;
+}
+
+hr.dashed {
+  border-top: 2px dashed #bbb;
+}
+
+hr.solid  {
+  border-top: 2px solid #bbb;
+}
+
+hr.dotted {
+  border-top: 2px dotted #bbb;
 }
