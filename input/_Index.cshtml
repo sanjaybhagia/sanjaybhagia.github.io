@@ -25,8 +25,8 @@
                     </a>
                     <p class="post-meta">
                         Posted on @(post.Get<DateTime>(BlogKeys.Published).ToLongDateString(Context))
-                        <br />
-                        Estimated read time:  @(readingMeta.Minutes == 0 ? $"a couple of seconds" : $"{readingMeta.Minutes} minutes")
+                        @* <br > *@
+                         @* Estimated read time:  @(readingMeta.Minutes == 0 ? $"a couple of seconds" : $"{readingMeta.Minutes} minutes") *@
                     </p>
                     @if(Context.Bool(BlogKeys.IndexFullPosts))
                     {

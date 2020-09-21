@@ -15,7 +15,7 @@
         @if (Published != default(DateTime))
         {
             <text>Published on @Published.ToLongDateString(Context)<br></text>
-            <text>Estimated read time:  @(ReadingMeta.Minutes == 0 ? $"a couple of seconds" : $"{ReadingMeta.Minutes} minutes")</text>
+            //<text>Estimated read time:  @(ReadingMeta.Minutes == 0 ? $"a couple of seconds" : $"{ReadingMeta.Minutes} minutes")</text>
         }
     </div>
     @if (Tags != null)

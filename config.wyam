@@ -72,7 +72,7 @@ Pipelines[Blog.BlogPosts].Append(
         return fullPath.Substring(6);
     }));
 
-Pipelines[Blog.BlogPosts].InsertBefore("WriteMetadata", new ReadingTime(wordsPerMinute: 200));
+//Pipelines[Blog.BlogPosts].InsertBefore("WriteMetadata", new ReadingTime(wordsPerMinute: 200));
 
 // Adds files to the root for each blog post
 Pipelines.Add("RootPosts",
