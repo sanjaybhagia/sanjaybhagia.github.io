@@ -16,7 +16,7 @@ meta:
 
 > I am learning [Pulumi](https://www.pulumi.com/) and I'll be sharing my journey along the way here in the form of blog posts and code samples on my [GitHub](https://github.com/sanjaybhagia/pulumi-examples). Join me on this journey if this topic interests you. 
 
-> Disclaimer: I have hands-on experience working with the Microsoft Azure Cloud platform not so much with others. So in here, I'll be looking at Pulumi from Azure's lens and most of my references and examples will be with Azure. 
+> Disclaimer: I have hands-on experience working with Microsoft Azure Cloud platform not so much with others. So in here, I'll be looking at Pulumi from Azure's lens and most of my references and examples will be with Azure. 
 
 If you haven't read my previous blog posts around this topic, you can check them out here: 
 - [Pulumi - What and Why?](/pulumi-what-and-why)
