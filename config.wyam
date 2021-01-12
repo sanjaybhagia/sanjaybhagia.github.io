@@ -7,7 +7,7 @@
 //System.Globalization.CultureInfo.DefaultThreadCurrentCulture = System.Globalization.CultureInfo.CreateSpecificCulture("sv-SE");
 Settings[Keys.Host] = "sanjaybhagia.com";
 Settings["Title"] = "Sanjay Bhagia's Blog";
-Settings["Description"] = "Sanjay Bhagia";
+Settings["Description"] = "The personal blog of Sanjay Bhagia";
 Settings["Intro"] = "This is my blog, where I write about stuff that interests me such as .NET, Azure, CI/CD and technology in general.";
 Settings[BlogKeys.PostsPath] = "posts";
 Settings[Keys.LinkLowercase] = true;
