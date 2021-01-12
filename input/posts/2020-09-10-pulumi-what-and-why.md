@@ -14,7 +14,7 @@ tags:
 
 > I am learning [Pulumi](https://www.pulumi.com/) and I'll be sharing my learning journey along the way here in the form of blog posts and code samples on my [GitHub](https://github.com/sanjaybhagia/pulumi-examples). Join me in this journey if this topic interest you. 
 
-> Disclaimer: I have hand-on experience working with Microsoft Azure Cloud platform not so much with others. So in here I'll be looking at Pulumi from Azure's lens and most of my references and examples will be with Azure. 
+> Disclaimer: I have hands-on experience working with Microsoft Azure Cloud platform not so much with others. So in here I'll be looking at Pulumi from Azure's lens and most of my references and examples will be with Azure. 
 
 ## Context
 [Infrastructure as Code (IaC)](https://en.wikipedia.org/wiki/Infrastructure_as_code) is the process of managing and provisioning computer data centres through machine-readable definition files, rather than physical hardware configuration or interactive configuration tools. It's the practice of treating your infrastructure like you would treat your code. Meaning, you can check in the definition files in a source control system, review it, version it and it produces the same environment every time it is used. 
