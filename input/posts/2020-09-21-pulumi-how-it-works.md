@@ -17,7 +17,7 @@ tags:
 > Disclaimer: I have hands-on experience working with Microsoft Azure Cloud platform not so much with others. So in here, I'll be looking at Pulumi from Azure's lens and most of my references and examples will be with Azure. 
 
 If you haven't read my previous blog posts around this topic, you can check them out here: 
-- [Pulumi - What and Why?](/pulumi-what-and-why)
+- [Pulumi - What and Why?](/2020/09/10/pulumi-what-and-why)
 
 In this blog post, I'm going to explore and understand How Pulumi works. What are the underlying core concepts and toward the end, will add a 'Hello World' to see in practice. 
 
