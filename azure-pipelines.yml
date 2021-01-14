@@ -22,7 +22,17 @@ steps:
 
 - script: wyam
   displayName: Build Site 
-
+  
+- task: Bash@3
+  displayName: Set timezone to Australia/Sydney
+  inputs:
+    targetType: 'inline'
+    script: |
+      echo "checking date"
+      date
+      echo "setting date to Australia/Sydney"
+      sudo timedatectl set-timezone "Australia/Sydney"
+      date
 - task: ArchiveFiles@2
   displayName: Zip Site
   inputs:
