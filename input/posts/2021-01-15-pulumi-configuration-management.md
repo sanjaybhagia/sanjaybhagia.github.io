@@ -10,6 +10,7 @@ tags:
   - devops
   - pulumi
   - ci/cd
+  - configuration management
 meta:
   description: Configuration Management for Pulumi
 ---
@@ -19,8 +20,8 @@ meta:
 > Disclaimer: I have hands-on experience working with Microsoft Azure Cloud platform not so much with others. So in here, I'll be looking at Pulumi from Azure's lens and most of my references and examples will be with Azure. 
 
 If you haven't read my previous blog posts around this topic, you can check them out here: 
-- [Pulumi - What and Why?](/pulumi-what-and-why)
-- [Pulumi - How it works?](/pulumi-how-it-works)
+- [Pulumi - What and Why?](/2020/09/10/pulumi-what-and-why)
+- [Pulumi - How it works?](/2020/09/21/pulumi-how-it-works)
 
 In this blog post, I'm going to explore and understand how configuration management works in Pulumi.
 
@@ -50,7 +51,7 @@ This (namespace) makes it easier to segregate the configurations for different p
 So if we have to retrieve the key from the specific namespace, we can specify the full name by adding prefix while fetching e.g., `pulumi config get 'azure:location'` or `pulumi config get 'hello-pulumi:location'`
 
 ## Working with Configuration via Code
-Working with configuration via code is also very straightforward. For C#, Pulumi exposes `Pulumi.Config` class. 
+Working with configuration via code is also very straightforward. For C#, Pulumi exposes `Pulumi.Config` type. 
 
 ```csharp
 var config = new Pulumi.Config();
@@ -154,7 +155,9 @@ var storageAccount = new Account("storage", new AccountArgs
 Now when we do `pulumi preview` we can see what Pulumi is going to create for us by checking state over at pulumi.com
 ![Pulumi Config Changes](/images/pulumi-state-config-changes.png)
 
-You can check out the entire source code along with configuration file [here](https://github.com/sanjaybhagia/pulumi-examples/tree/d035014aa852ff2d68a8958d5036037a5cf50ae4/hello-pulumi) for reference. 
-
 ## Summary
 Pulumi provides a robust mechanism for configuration management of your infrastructure. You can interact with configs via the CLI and programming model with the same ease. There are a number of built-in utility functions within the SDK to make it easier to work with configurations. You can use the power of programming language to work with the configurations like you normally would in your application. 
+
+You can check out the entire source code along with configuration file [here](https://github.com/sanjaybhagia/pulumi-examples/tree/d035014aa852ff2d68a8958d5036037a5cf50ae4/hello-pulumi) for reference. 
+
+Cheers
