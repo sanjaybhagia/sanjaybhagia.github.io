@@ -31,8 +31,10 @@ steps:
       sudo timedatectl set-timezone "Australia/Sydney"
       date
 
-- script: wyam
+- script: dotnet wyam build site -s Minify=true -o ../../$OUT_DIR
   displayName: Build Site 
+  env:
+    DOTNET_ROLL_FORWARD: Major
   
 - task: ArchiveFiles@2
   displayName: Zip Site
