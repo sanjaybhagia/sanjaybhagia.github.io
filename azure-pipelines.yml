@@ -15,7 +15,7 @@ steps:
   enabled: true
   inputs:
     packageType: 'sdk'
-    version: '3.1.x'
+    version: '3.1.29'
 
 - script: dotnet tool install -g Wyam.Tool
   displayName: Install Wyam
