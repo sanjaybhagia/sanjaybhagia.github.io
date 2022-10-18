@@ -2,17 +2,14 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Ubuntu-latest'
+  vmImage: 'windows-latest'
 
 variables:
   configuration: debug
   platform: x64
 
 steps:
-- task: DotNetCoreInstaller@0
-  displayName: Install .NET Core SDK
-  name: install_dotnetcore_sdk
-  enabled: true
+- task: UseDotNet@2
   inputs:
     packageType: 'sdk'
     version: '2.x'
