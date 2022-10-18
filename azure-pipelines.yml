@@ -2,7 +2,7 @@ trigger:
 - master
 
 pool:
-  vmImage: 'Ubuntu-16.04'
+  vmImage: 'Ubuntu-latest'
 
 variables:
   configuration: debug
@@ -15,7 +15,7 @@ steps:
   enabled: true
   inputs:
     packageType: 'sdk'
-    version: '2.2.101'
+    version: '2.x'
 
 - script: dotnet tool install -g Wyam.Tool
   displayName: Install Wyam
