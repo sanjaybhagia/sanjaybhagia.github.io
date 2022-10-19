@@ -50,6 +50,6 @@ steps:
       -H 'Authorization: Bearer $(netlifyAccessToken)' 
       -H 'Content-Type: application/zip'
       --data-binary '@$(Build.BuildId).zip'
-      https://api.netlify.com/api/v1/sites/$(netlifySiteId)/deploys
+      https://api.netlify.com/api/v1/sites/$(netlifysite)/deploys
   workingDirectory: '$(Build.ArtifactStagingDirectory)'
   displayName: 'Upload to Netlify'
