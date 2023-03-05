@@ -1,8 +1,8 @@
 ---
 Title: 'The best investment I made in 2022'
 Description: Find out how a simple $15 bullet journal transformed my life in 2022 and why you should give it a try.
-date: 2023-01-18
-published: 2023-01-18
+date: 2023-03-06
+published: 2023-03-06
 author: Sanjay Bhagia
 layout: post
 categories:
