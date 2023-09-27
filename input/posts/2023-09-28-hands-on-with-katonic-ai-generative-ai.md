@@ -1,6 +1,6 @@
 ---
-Title:  'Hands-on with Katonic.ai's Generative AI Platform'
-Description: Dive into a hands-on exploration of Katonic.ai's Generative AI Platform, uncovering its user-friendly, no-code approach and powerful Playground feature for effortless Large Language Model deployment
+Title: 'Hands-on with Katonic.ai's Generative AI Platform'
+Description: Exploring Katonic.ai's Generative AI Platform
 date: 2023-09-28
 published: 2023-09-28
 author: Sanjay Bhagia
@@ -13,7 +13,7 @@ tags:
   - llms
   - large language models
   - playground
-  - katonic.ai
+  - katonicai
   - products
 ---
 
