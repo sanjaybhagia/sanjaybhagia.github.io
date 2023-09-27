@@ -1,5 +1,5 @@
 ---
-Title: 'Hands-on with Katonic.ai's Generative AI Platform'
+Title:  'Hands-on with Katonic.ai's Generative AI Platform'
 Description: Exploring Katonic.ai's Generative AI Platform
 date: 2023-09-28
 published: 2023-09-28
@@ -14,7 +14,6 @@ tags:
   - large language models
   - playground
   - katonicai
-  - products
 ---
 
 OpenAI has taken the world by storm, and Generative AI is all the rage these days. It's not just OpenAI; many other companies are working on Generative AI and Large Language Models (LLMs). These models are rapidly changing how we interact with machines and build applications. From Copilots to Spotify's recent Voice Translation for podcasters, we are witnessing the sheer power of these models penetrating our daily lives.
