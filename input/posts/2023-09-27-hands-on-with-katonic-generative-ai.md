@@ -135,11 +135,12 @@ Copy this token, as you won't be able to see this again.
 
 Now, select the `API usage docs` tab and click the `View documentation` button
 ![API URL](/images/kgai-29.png)
+
 It should bring up the swagger page. 
 
 Click `Authorize` and paste the API token we copied earlier. 
 
-![API URL](images/kgai-14.png)
+![API URL](/images/kgai-14.png)
 ![API URL](/images/kgai-15.png)
 
 ## Use the API
@@ -175,6 +176,7 @@ Playground is a place where we can explore a variety of Generative AI models (60
 ![API URL](/images/kgai-17.png)
 
 Here, we can find models such as Stable Diffusion, code Llama, MusicGen and many others. You can navigate this list and filter based on categories for easier navigation.
+
 Let's explore stable-diffusion model here. 
 ![API URL](/images/kgai-18.png)
 ![API URL](/images/kgai-19.png)
