@@ -86,12 +86,16 @@ Fill-in the project name and description. The important thing is to pick the typ
 ## Add Data
 The next screen is where we have to provide the source of data we want our chatbot to be trained on. We can either provide URLs or upload documents. I'll provide five links to the blog posts that I have written on Pulumi. (*5 is the limit for free project*). 
 ![Add Data](/images/kgai-4.png)
+
 ## Customise
 This is where things get interesting. Here we can tweak a number of settings. 
 First up is the language model we want to pick. In the free tier, we can only select `Pick the Best LLM`. Katonica picks up the appropriate model based on the project type we selected earlier. But we could choose any other LLM model. 
 ![Customise Data LLM](/images/kgai-5.png)
+
 Next up, we can customise the look and feel of our Chat application we will get in the end. And also if we want to make this application be available as public or private. This is pretty powerful, so you can be sure your enterprise applications are not accessible publicly. 
+
 ![Customise Data Look and Feel](/images/kgai-6.png)
+
 It is not enough to train the models on just the data; we want to control it so that it doesn't blurb out the answers in any way it pleases. We want to ensure our models don't include inappropriate information, especially if this is something we are using in a business context. For example, we want to filter our content of any abusive wording. Katonica allows us to tweak these things at this stage, and it'll ensure the generated responses respect the constraints we set up here. 
 Other than content filtration and restrictions, we can also define the personality our bot should have while answering the questions. This is your opportunity to get creative; if you have always wanted to sound like William Shakespeare, go ahead and tell the model! 
 
@@ -99,7 +103,9 @@ Other than content filtration and restrictions, we can also define the personali
 
 ## Project Completion 
 Once we have provided our data and customised the model to our wishes, hit next. Click the Deploy button and let Katonica work its magic. It might take a few minutes for the model to be ready. Once it's ready, you'll see the green tick, and now you are ready to play with it. You can head over to 'Deploy' tab from the left to see all your models. 
+
 ![Project Deployed](/images/kgai-9.png)
+
 Hit the `Try this 'Chatbot'` button to launch your very own  bot!
 
 ## Testing
@@ -107,8 +113,10 @@ Here, we have our very own chatbot trained on some of my blog posts in all its g
 
 Alright, it's time to test it. Let me ask a few questions
 ![Project Deployed](/images/kgai-10.png)
+
 Not bad! It pulled relevant information from my blog posts. Let's try few more questions. 
 ![Project Deployed](/images/kgai-11.png)
+
 ![Project Deployed](/images/kgai-12.png)
 
 As you can see, it picks up the content from the links I provided and gives me correct answers. It even returns the formatted results (bullet points) while answering. Since it's an LLM, you can converse with it as you please and it will return the results based on your input. 
@@ -129,11 +137,14 @@ Click on `API`, and it'll open up a modal. Here, we can see two endpoints:
 
 Let's create the API token before we click the first link, as we will need it for the next step. 
 Click `Create API token`, provide the token name and click the `Create token` button. 
+
 ![API URL](/images/kgai-27.png)
+
 Copy this token, as you won't be able to see this again. 
 ![API URL](/images/kgai-28.png)
 
 Now, select the `API usage docs` tab and click the `View documentation` button
+
 ![API URL](/images/kgai-29.png)
 
 It should bring up the swagger page. 
@@ -141,6 +152,7 @@ It should bring up the swagger page.
 Click `Authorize` and paste the API token we copied earlier. 
 
 ![API URL](/images/kgai-14.png)
+
 ![API URL](/images/kgai-15.png)
 
 ## Use the API
@@ -167,6 +179,7 @@ Let's switch gears and explore some other interesting features that the platform
 
 If you recall, while creating our chatbot early on, we let Katonica choose the best model for us. 
 ![Customise Data LLM](/images/kgai-5.png)
+
 And it's fine. Katonic picks up the model suitable for the type of application we want to build. It makes it very easy for us if we don't understand much about different models or how they function. 
 
 However, if we want to gain more control over the type of LLM model we want to work with, Katonic makes it extremely easy for us to do so. 
@@ -179,6 +192,7 @@ Here, we can find models such as Stable Diffusion, code Llama, MusicGen and many
 
 Let's explore stable-diffusion model here. 
 ![API URL](/images/kgai-18.png)
+
 ![API URL](/images/kgai-19.png)
 
 As we can see, based on our input, **an astronaut riding a horse on mars, hd, dramatic lightning**, it generates the image on the right. 
@@ -191,11 +205,15 @@ Another important element on this page is the 'Model Card'. For each model, you 
 # Tuning Studio
 Another stellar feature, albeit an advanced one, is the Tuning Studio. 
 ![API URL](/images/kgai-22.png)
+
 Here, you can easily manage all your custom prompts for various models you want to use for different applications. Katonica offers pre-created prompts that you can use as a foundation before customising them for your use cases.
 ![API URL](/images/kgai-23.png) 
+
 This is a good place to experiment with your prompts and tweak the parameters of the desired model (even try out different models to see which gives you the desired outcome). You can provide instructions to the model, give it some training data and test out the models. 
 ![API URL](/images/kgai-24.png) 
+
 ![API URL](/images/kgai-25.png) 
+
 Once you are finished with your prompts and happy with the results, you can save it!
 ![API URL](/images/kgai-26.png)
 
