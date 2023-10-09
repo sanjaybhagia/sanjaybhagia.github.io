@@ -26,7 +26,7 @@ Here is the high level architecture of the system we are going to design in this
 ![Project Deployed](/images/apim-sb-topic.png)
 
 We will use Azure API Management to expose the endpoints and make use of Azure APIM policies to send the orders to Azure Service Bus Topics. Service Bus Topic will have different subscriptions to receive orders for different geographies. At the end, we will have multiple consumers (in the form of Azure functions) to process the messages from the Service Bus Topic for respective subscriptions. 
-This architecture, allows to scale the processing of orders based on geography. We can have multiple consumers to process the messages from the Service Bus Topic to distribute the load.
+This architecture, allows us to scale the processing of orders based on geography. We can have multiple consumers to process the messages from the Service Bus Topic to distribute the load.
 
 Before we dive into the details, let's understand the components we are going to use in this demo.
 
@@ -43,13 +43,13 @@ One of the core components of Azure Service Bus is the <a href='https://learn.mi
 It provides a unified experience across the entire API lifecycle, enabling developers to create APIs and app developers to consume them easily.
 
 ## API Management Policies
-<a href='https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-policies' target='blank'>Azure API Management policies</a> are a set of rules that are executed by the API Gateway when a request is made to an API. These policies can be used to modify the request or response, enforce security, or perform other actions. Policies can be defined at the API level, the operation level, or the product level. Azure API Management provides a rich set of built-in policies and also allows you to define custom policies using C# or JavaScript.
+<a href='https://learn.microsoft.com/en-us/azure/api-management/api-management-howto-policies' target='blank'>Azure API Management policies</a> are a set of rules that are executed by the API Gateway when a request is made to an API. These policies can be used to modify the request or response, enforce security, or perform other actions. Policies can be defined at the API level, the operation level, or the product level. Azure API Management provides a rich set of built-in policies and also allows you to define custom policies using XML and C# (policy expressions).
 
 When integrating APIM with Azure Service Bus Topic, the idea is to allow APIM to publish messages to the Service Bus Topic by using one of the built-in policies. This makes is very easy for us to send messages to the Service Bus without having to write any code.
 
 
 # Provision the Infrastructure 
-Let's walk through the steps to provision the infrastructure required for this demo. I'm using Azure CLI (`az cli`) to provision the resources. You can use the Azure Portal, ARM templates, or PowerShell to do the same.
+Let's walk through the steps to provision the required infrastructure. I'm using Azure CLI (`az cli`) to provision the resources. You can use the Azure Portal, ARM templates, or PowerShell to do the same.
 
 ## Set the account 
 ```bash
@@ -126,14 +126,14 @@ az servicebus topic subscription create --name sydneyorders --resource-group $re
 ```
 
 ### Service Bus Topic Subscription Rule
-The way we route messages to subscriptions is via <a href='https://learn.microsoft.com/en-us/azure/service-bus-messaging/topic-filters' target='blank'>filters.</a>. Here, we are creating a <a href='' taget='blank'>SqlFilter</a> based on the `originUrl` custom property that will be coming with incoming messages to this topic. 
+The way we route messages to subscriptions is via <a href='https://learn.microsoft.com/en-us/azure/service-bus-messaging/topic-filters' target='blank'>filters</a>. Here, we are creating a <a href='https://learn.microsoft.com/en-us/azure/service-bus-messaging/topic-filters#sql-filters' taget='blank'>SqlFilter</a> based on the `originUrl` custom property that will be coming with incoming messages to this topic. 
 
-This allows us to route the messages to different subscriptions based on the originUrl properties on each message.
 
 ```bash
 az servicebus topic subscription rule create --resource-group $resourceGroupName --namespace-name $serviceBusNamespace --topic-name orders --subscription-name sydneyorders --name processorders --filter-sql-expression "originUrl='/orders/process/sydney'"
 ```
 ![Project Deployed](/images/apim-sb-topic-sqlfilter.png)
+
 ![Project Deployed](/images/apim-sb-topic-filter-definition.png)
 
 ### Assign Permissions to Service Bus Namespace
@@ -146,7 +146,7 @@ subscriptionId=$(az account show --query id --output tsv)
 # Get the objectId of the APIM instance (system-assigned managed identity)
 assigneeId=$(az apim show --name $apimName --resource-group $resourceGroupName --query 'identity.principalId' --out tsv)
 
-# Finally, assign the permissions Azure Service Bus namespace
+# Finally, assign the permissions on Azure Service Bus namespace
 az role assignment create --role "Azure Service Bus Data Sender" --assignee $assigneeId --scope /subscriptions/$subscriptionId/resourceGroups/$resourceGroupName/providers/Microsoft.ServiceBus/namespaces/$serviceBusNamespace
 ```
 
@@ -159,7 +159,7 @@ For the sake of simplicity, I'm setting the permissions on the entire namespace.
 ## Set Policies in APIM
 This is where the magic happens. We are leveraging Azure APIM policies to receive requests, extract information from incoming requests, and send messages to the Service Bus Topic. We are using the managed identity to get the access token from Azure AD and then using that access token to send the message to the Service Bus Topic. 
 
-For the purposes of demonstration, this endpoint is not secured. We haven't set up any authentication or authorization. In a real-world scenario, you would want to secure this endpoint. You can configure the setting on the API level or you can validate the incoming request within the policy itself.
+> For the purposes of demonstration, this endpoint is not secured. We haven't set up any authentication or authorization. In a real-world scenario, you would want to secure this endpoint. You can configure the setting on the API level or you can validate the incoming request within the policy itself.
 
 Here, we are simply setting the backend URL to the service bus namespace.
 
@@ -231,7 +231,6 @@ As we can see, we did indeed receive the message in our subscription within the 
 ![Project Deployed](/images/apim-sb-topic-message-properties.png)
 
 From this point, you can very well create an Azure function to receive messages from this topic and subscription.
-I'm not going into the details of that here but it should very quite straightforward to do that. 
 
 ## Bonus - Azure Function App
 Now, we are ready to write our code to process the orders. But first, let's spin up an azure function. We need a storage account and Azure Function app first. 
