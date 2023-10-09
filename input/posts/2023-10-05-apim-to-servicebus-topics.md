@@ -23,7 +23,7 @@ Imagine we are are a dropshipping supplier for e-commerce stores around the worl
 
 Here is the high level architecture of the system we are going to design in this blog post.
 
-![Project Deployed](../images/apim-sb-topic.png)
+![Project Deployed](/images/apim-sb-topic.png)
 
 We will use Azure API Management to expose the endpoints and make use of Azure APIM policies to send the orders to Azure Service Bus Topics. Service Bus Topic will have different subscriptions to receive orders for different geographies. At the end, we will have multiple consumers (in the form of Azure functions) to process the messages from the Service Bus Topic for respective subscriptions. 
 This architecture, allows to scale the processing of orders based on geography. We can have multiple consumers to process the messages from the Service Bus Topic to distribute the load.
@@ -35,7 +35,7 @@ Before we dive into the details, let's understand the components we are going to
 
 One of the core components of Azure Service Bus is the <a href='https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-queues-topics-subscriptions#topics-and-subscriptions' target='blank'>Topic</a>, which can be used for publish/subscribe scenarios. Messages are sent to a topic and delivered to one or more associated subscriptions.
 
-![Alt text](../images/azure-sb-topic-highlevel.png)
+![Alt text](/images/azure-sb-topic-highlevel.png)
 
 
 # API Management
@@ -133,8 +133,8 @@ This allows us to route the messages to different subscriptions based on the ori
 ```bash
 az servicebus topic subscription rule create --resource-group $resourceGroupName --namespace-name $serviceBusNamespace --topic-name orders --subscription-name sydneyorders --name processorders --filter-sql-expression "originUrl='/orders/process/sydney'"
 ```
-![Project Deployed](../images/apim-sb-topic-sqlfilter.png)
-![Project Deployed](../images/apim-sb-topic-filter-definition.png)
+![Project Deployed](/images/apim-sb-topic-sqlfilter.png)
+![Project Deployed](/images/apim-sb-topic-filter-definition.png)
 
 ### Assign Permissions to Service Bus Namespace
 In order for APIM to send messages to the Service Bus Topic, we need to assign the `Azure Service Bus Data Sender` role for APIM instance (*system-assigned managed identity we created earlier at the time of provisioning the APIM instance*) on service bus namespace.
@@ -165,7 +165,7 @@ Here, we are simply setting the backend URL to the service bus namespace.
 
 Navigate to APIM -> APIs -> Orders -> Process Orders -> Inbound processing -> Policy Code editor. 
 
-![Set APIM Policy](../images/apim-set-policies-I.png)
+![Set APIM Policy](/images/apim-set-policies-I.png)
 
 Copy and paste the following policy and click `Save`
 
@@ -197,7 +197,7 @@ Copy and paste the following policy and click `Save`
     </on-error>
 </policies>
 ```
-![Set APIM Policy](../images/apim-set-policies-II.png)
+![Set APIM Policy](/images/apim-set-policies-II.png)
 
 # Test the API
 Now, we have everything in place. Let's test the API. We will use Postman to test the API. 
@@ -207,7 +207,7 @@ Let's issue a simple request from Postman to the endpoint
 ```bash 
 https://azecommstoreapimae.azure-api.net/orders/process/sydney
 ```
-![Project Deployed](../images/apim-request-postman.png)
+![Project Deployed](/images/apim-request-postman.png)
 
 As we can see, the request is successful and we received a `201 Created` response!
 
@@ -226,9 +226,9 @@ Let's validate the message from the Portal.
 ## Azure Service Bus - Portal
 As we can see, we did indeed receive the message in our subscription within the Service Bus Topic. Upon further inspection, we can see that the message was sent to the `sydneyorders` subscription and the `processorders` rule was applied.
 
-![Project Deployed](../images/apim-sb.png)
-![Project Deployed](../images/apim-sb-topic-message-body.png)
-![Project Deployed](../images/apim-sb-topic-message-properties.png)
+![Project Deployed](/images/apim-sb.png)
+![Project Deployed](/images/apim-sb-topic-message-body.png)
+![Project Deployed](/images/apim-sb-topic-message-properties.png)
 
 From this point, you can very well create an Azure function to receive messages from this topic and subscription.
 I'm not going into the details of that here but it should very quite straightforward to do that. 
@@ -273,7 +273,7 @@ public class ServiceBusTopicListeners
 }
 ```
 When we run this function locally in debug mode, and set the breakpoint, we see that message is received successfully.
-![Azure Function Local Debug](../images/apim-sb-topic-function-execution.png)
+![Azure Function Local Debug](/images/apim-sb-topic-function-execution.png)
 
 
 ## Clean up the resources
