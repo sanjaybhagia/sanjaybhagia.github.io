@@ -227,7 +227,9 @@ Let's validate the message from the Portal.
 As we can see, we did indeed receive the message in our subscription within the Service Bus Topic. Upon further inspection, we can see that the message was sent to the `sydneyorders` subscription and the `processorders` rule was applied.
 
 ![Project Deployed](/images/apim-sb.png)
+
 ![Project Deployed](/images/apim-sb-topic-message-body.png)
+
 ![Project Deployed](/images/apim-sb-topic-message-properties.png)
 
 From this point, you can very well create an Azure function to receive messages from this topic and subscription.
