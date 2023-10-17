@@ -2,7 +2,7 @@
 Title: 'Pulumi - State Management'
 date: 2021-02-01
 published: 2021-02-01
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 categories:
   - Blog

@@ -2,7 +2,7 @@
 id: 344
 title: Deleting Managed Metadata Fields via PowerShell
 date: 2015-01-08T16:09:50+02:00
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 guid: https://www.sanjaybhagia.com/?p=344
 permalink: /2015/01/08/deleting-managed-metadata-fields-via-powershell/

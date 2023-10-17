@@ -3,7 +3,7 @@ Title:  'Deploying IronPdf to Azure Functions via CI/CD using Azure DevOps'
 Description: Guide to setup a CI/CD Pipeline (YAML) in Azure DevOps for running IronPdf in Azure Functions.
 date: 2023-08-20
 published: 2023-08-20
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 categories:
   - Blog

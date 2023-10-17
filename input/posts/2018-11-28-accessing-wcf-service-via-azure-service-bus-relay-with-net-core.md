@@ -2,7 +2,7 @@
 id: 632
 title: Accessing WCF Service via Azure Service Bus Relay with .NET Core
 date: 2018-11-28T11:00:34+02:00
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 guid: https://www.sanjaybhagia.com/?p=632
 permalink: /2018/11/28/accessing-wcf-service-via-azure-service-bus-relay-with-net-core/

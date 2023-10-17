@@ -2,7 +2,7 @@
 Title: 'Pulumi - Configuration Management'
 date: 2021-01-15
 published: 2021-01-15
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 categories:
   - Blog

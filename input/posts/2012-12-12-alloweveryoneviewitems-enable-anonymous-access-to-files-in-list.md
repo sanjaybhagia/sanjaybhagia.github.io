@@ -2,7 +2,7 @@
 id: 90
 title: 'AllowEveryoneViewItems - Enable anonymous access to files in list'
 date: 2012-12-12T19:13:34+02:00
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 permalink: /2012/12/12/alloweveryoneviewitems-enable-anonymous-access-to-files-in-list/
 layers:

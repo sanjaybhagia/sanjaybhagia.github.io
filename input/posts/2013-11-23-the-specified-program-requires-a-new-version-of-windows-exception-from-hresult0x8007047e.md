@@ -2,7 +2,7 @@
 id: 291
 title: The specified program requires a new version of Windows. (Exception from HRESULT:0x8007047E)
 date: 2013-11-23T16:08:11+02:00
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 permalink: /2013/11/23/the-specified-program-requires-a-new-version-of-windows-exception-from-hresult0x8007047e/
 disqus_identifier: https://www.sanjaybhagia.com/2013/11/23/the-specified-program-requires-a-new-version-of-windows-exception-from-hresult0x8007047e/

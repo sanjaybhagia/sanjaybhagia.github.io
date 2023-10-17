@@ -2,7 +2,7 @@
 id: 269
 title: Updates are currently disabled in GET requests exception while provisioning multiple site collections
 date: 2013-06-02T18:44:45+02:00
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 permalink: /2013/06/02/updates-are-currently-disabled-in-get-requests-exception-while-provisioning-multiple-site-collections/
 disqus_identifier: https://www.sanjaybhagia.com/2013/06/02/updates-are-currently-disabled-in-get-requests-exception-while-provisioning-multiple-site-collections/

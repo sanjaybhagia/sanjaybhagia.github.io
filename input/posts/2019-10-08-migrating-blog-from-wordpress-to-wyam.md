@@ -1,7 +1,7 @@
 ---
 Title: 'Migrating from WordPress to Wyam'
 date: 2019-10-05
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 categories:
   - Blog

@@ -2,7 +2,7 @@
 Title: 'Pulumi - Secrets Management'
 date: 2021-01-26
 published: 2021-01-26
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 categories:
   - Blog

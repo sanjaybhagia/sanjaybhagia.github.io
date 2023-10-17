@@ -2,7 +2,7 @@
 Title: 'Pulumi - How it works?'
 date: 2020-09-21
 published: 2020-09-21
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 categories:
   - Blog

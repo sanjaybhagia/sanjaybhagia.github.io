@@ -2,7 +2,7 @@
 id: 735
 title: 'Microsoft OpenHack DevOps - Stockholm'
 date: 2019-02-11T15:27:35+02:00
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 guid: https://www.sanjaybhagia.com/?p=735
 permalink: /2019/02/11/microsoft-openhack-devops-stockholm/

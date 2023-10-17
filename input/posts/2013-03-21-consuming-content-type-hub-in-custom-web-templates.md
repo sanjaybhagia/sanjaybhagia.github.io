@@ -2,7 +2,7 @@
 id: 211
 title: Consuming Content Type Hub in custom web templates
 date: 2013-03-21T13:40:44+02:00
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 permalink: /2013/03/21/consuming-content-type-hub-in-custom-web-templates/
 disqus_identifier: https://www.sanjaybhagia.com/2013/03/21/consuming-content-type-hub-in-custom-web-templates/

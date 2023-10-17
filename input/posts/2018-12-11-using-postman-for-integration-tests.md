@@ -2,7 +2,7 @@
 id: 624
 title: Using Postman for Integration Tests
 date: 2018-12-11T10:55:51+02:00
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 guid: http://www.sanjaybhagia.com/?p=624
 permalink: /2018/12/11/using-postman-for-integration-tests/

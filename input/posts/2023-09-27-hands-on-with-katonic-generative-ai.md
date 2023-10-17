@@ -3,7 +3,7 @@ Title: Hands-on with Katonic.ai's Generative AI Platform
 Description: Exploring Katonic.ai's Generative AI Platform
 date: 2023-09-27
 published: 2023-09-27
-author: sanjay.bhagia@gmail.com
+author: sanjay.bhagia@gmail.com (Sanjay Bhagia)
 layout: post
 categories:
   - Blog
