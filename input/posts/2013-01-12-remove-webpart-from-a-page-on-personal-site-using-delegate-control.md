@@ -2,7 +2,7 @@
 id: 108
 title: Remove webpart from a page on Personal site using delegate control
 date: 2013-01-12T12:06:56+02:00
-author: sanjaybhagia
+author: sanjay.bhagia@gmail.com
 layout: post
 permalink: /2013/01/12/remove-webpart-from-a-page-on-personal-site-using-delegate-control/
 layers:

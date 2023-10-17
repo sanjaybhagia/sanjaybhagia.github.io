@@ -2,7 +2,7 @@
 id: 188
 title: Paged Custom Search Query using KeywordQuery
 date: 2013-03-14T09:16:17+02:00
-author: sanjaybhagia
+author: sanjay.bhagia@gmail.com
 layout: post
 permalink: /2013/03/14/paged-custom-search-query-using-keywordquery/
 disqus_identifier: https://www.sanjaybhagia.com/2013/03/14/paged-custom-search-query-using-keywordquery/

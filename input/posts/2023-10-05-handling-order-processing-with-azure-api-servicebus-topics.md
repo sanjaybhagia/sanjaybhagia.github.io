@@ -3,7 +3,7 @@ Title: Handling Order Processing with Azure API Management and Service Bus Topic
 Description: Learn how to securely send messages to Azure Service Bus Topics directly from Azure API Management using the policies.
 date: 2023-10-10
 published: 2023-10-10
-author: Sanjay Bhagia
+author: sanjay.bhagia@gmail.com
 layout: post
 categories:
   - Blog

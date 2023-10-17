@@ -1,7 +1,7 @@
 ---
 Title: 'Capture your favourite quotes from physical books - Part 2'
 date: 2020-08-25
-author: sanjaybhagia
+author: sanjay.bhagia@gmail.com
 layout: post
 categories:
   - Blog

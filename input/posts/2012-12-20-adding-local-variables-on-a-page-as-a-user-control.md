@@ -2,7 +2,7 @@
 id: 122
 title: Adding local variables on a page as a user control
 date: 2012-12-20T19:49:30+02:00
-author: sanjaybhagia
+author: sanjay.bhagia@gmail.com
 layout: post
 permalink: /2012/12/20/adding-local-variables-on-a-page-as-a-user-control/
 layers:

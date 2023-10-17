@@ -2,7 +2,7 @@
 id: 250
 title: Incorrect values for User Fields while copying list items from one site collection to another
 date: 2013-05-25T12:08:22+02:00
-author: sanjaybhagia
+author: sanjay.bhagia@gmail.com
 layout: post
 permalink: /2013/05/25/incorrect-values-for-user-fields-while-copying-list-items-from-one-site-collection-to-another/
 disqus_identifier: https://www.sanjaybhagia.com/2013/05/25/incorrect-values-for-user-fields-while-copying-list-items-from-one-site-collection-to-another/

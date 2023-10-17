@@ -1,7 +1,7 @@
 ---
 Title: 'Passing AZ-220: Microsoft Azure IoT Developer Exam'
 date: 2020-09-05
-author: sanjaybhagia
+author: sanjay.bhagia@gmail.com
 layout: post
 categories:
   - Blog

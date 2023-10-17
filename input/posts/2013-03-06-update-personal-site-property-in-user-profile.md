@@ -2,7 +2,7 @@
 id: 181
 title: Update Personal Site Property in User Profile
 date: 2013-03-06T11:01:28+02:00
-author: sanjaybhagia
+author: sanjay.bhagia@gmail.com
 layout: post
 permalink: /2013/03/06/update-personal-site-property-in-user-profile/
 layers:

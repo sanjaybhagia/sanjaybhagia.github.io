@@ -2,7 +2,7 @@
 id: 586
 title: Accessing Azure Analysis Services Models using .NET Core
 date: 2018-11-12T14:31:12+02:00
-author: sanjaybhagia
+author: sanjay.bhagia@gmail.com
 layout: post
 guid: https://www.sanjaybhagia.com/?p=586
 permalink: /2018/11/12/accessing-azure-analysis-services-models-using-net-core/

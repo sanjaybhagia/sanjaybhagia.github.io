@@ -2,7 +2,7 @@
 Title: 'Pulumi - What and Why?'
 date: 2020-09-10
 published: 2020-09-10
-author: sanjaybhagia
+author: sanjay.bhagia@gmail.com@gmail.com
 layout: post
 categories:
   - Blog

@@ -2,7 +2,7 @@
 id: 538
 title: Are you keeping your secrets secret?
 date: 2018-10-25T21:42:58+02:00
-author: sanjaybhagia
+author: sanjay.bhagia@gmail.com
 layout: post
 guid: https://www.sanjaybhagia.com/?p=538
 permalink: /2018/10/25/are-you-keeping-your-secrets-secret/

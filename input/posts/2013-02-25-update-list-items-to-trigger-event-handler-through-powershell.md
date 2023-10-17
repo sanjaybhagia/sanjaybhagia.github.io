@@ -2,7 +2,7 @@
 id: 165
 title: Update list items to trigger event handler through PowerShell
 date: 2013-02-25T09:50:51+02:00
-author: sanjaybhagia
+author: sanjay.bhagia@gmail.com
 layout: post
 permalink: /2013/02/25/update-list-items-to-trigger-event-handler-through-powershell/
 layers:
