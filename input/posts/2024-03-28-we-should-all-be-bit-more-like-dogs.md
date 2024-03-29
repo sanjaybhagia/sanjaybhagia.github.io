@@ -1,5 +1,5 @@
 ---
-Title: We should all be like dogs
+Title: We should all be bit more like dogs
 Description: We can learn valuable lesson on life from dogs. They are calm, satisfied with very little, don't overthink, masters of solitude, quick to forgive, unmatched excitement, make you move, what you see is what you get.
 date: 2024-03-28
 published: 2024-03-28
@@ -12,6 +12,7 @@ tags:
   - life
   - lessons
   - reflection
+image: /images/chihu.png
 ---
 
 Dogs. They are adorable. They are cute and cuddly and bring so much joy to our lives. 
@@ -51,10 +52,13 @@ Yes, I know, it’s unusual but hear me out.
   I understand we can't always be like that, but what if we try a little bit more to be ourselves and more authentic?
 
 
+
 So, wouldn't incorporating or amplifying these dog-like qualities enhance your daily life? It has certainly helped me. You be the judge of it.
 
 Do you have a dog? What do you like about them? Share your stories in the comments below.
 
+
 Remember, sometimes the greatest lessons come from the most unexpected teachers.
+
 
 Until next time.
