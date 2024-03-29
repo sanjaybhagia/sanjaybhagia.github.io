@@ -15,8 +15,6 @@ tags:
 image: /images/chihu.png
 ---
 
-![Chihu](/images/chihu.png)
-
 Dogs. They are adorable. They are cute and cuddly and bring so much joy to our lives. 
 
 Take my dog, Chihu - oh, I adore her. I love spending time with her. 
