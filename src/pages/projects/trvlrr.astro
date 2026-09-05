@@ -1,0 +1,67 @@
+---
+import fs from 'node:fs';
+import { imageSize } from 'image-size';
+import Base from '../../layouts/Base.astro';
+
+const shots = [
+  { src: '/images/projects/trvlrr-trips.webp', alt: 'Trvlrr trips list with generated poster art for each destination' },
+  { src: '/images/projects/trvlrr-itinerary.webp', alt: 'Trvlrr day-by-day itinerary with flights, hotel nights and a gap warning' },
+  { src: '/images/projects/trvlrr-search.webp', alt: 'Trvlrr AI photo search finding temples from a one-word description' },
+].map((s) => ({ ...s, ...imageSize(fs.readFileSync(`./public${s.src}`)) }));
+---
+<Base
+  title="Trvlrr"
+  description="A private travel journal — plan the trips ahead, keep the ones behind, and find any memory by describing it."
+>
+  <p class="eyebrow">iOS App</p>
+  <h1>Trvlrr</h1>
+  <p class="lede">
+    Every trip you've ever taken, in one place — plan the ones ahead, keep the
+    ones behind, and find any memory by describing it.
+  </p>
+
+  <div class="cta-row">
+    <a class="btn" href="https://trvlrr.app">trvlrr.app</a>
+    <span class="btn secondary" aria-disabled="true">App Store — in review</span>
+  </div>
+
+  <section aria-labelledby="tr-shots">
+    <p class="eyebrow" id="tr-shots">On your phone</p>
+    <div class="shots">
+      {shots.map((s) => (
+        <img src={s.src} alt={s.alt} width={s.width} height={s.height} loading="lazy" decoding="async" />
+      ))}
+    </div>
+  </section>
+
+  <section aria-labelledby="tr-features">
+    <p class="eyebrow" id="tr-features">Features</p>
+    <div class="prose">
+      <ul>
+        <li>Day-by-day itineraries built from your flights and hotels — with a warning for any night with nowhere booked</li>
+        <li>Forward a booking confirmation email and it files itself on the right trip</li>
+        <li>Describe a trip in plain words and the itinerary is generated for you</li>
+        <li>Search photos by what you remember — “that lighthouse”, “the ramen place”</li>
+        <li>Face recognition entirely on-device: tag someone once, find every photo of them</li>
+        <li>A world map of everywhere you've been, plus statistics across the years</li>
+        <li>Generated poster art for every destination</li>
+        <li>Share a trip with the friends who were on it — free and unlimited</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="tr-pricing">
+    <p class="eyebrow" id="tr-pricing">Pricing</p>
+    <div class="prose">
+      <p>
+        Free includes unlimited trips, 100 photos and 3 AI assists a month.
+        Trvlrr Plus (A$3.99/month or A$24.99/year) removes the limits —
+        unlimited full-resolution photos, unlimited AI, people recognition,
+        and a seat for your partner to share the whole travel log.
+      </p>
+      <p>Requires iOS 17 or later.</p>
+    </div>
+  </section>
+
+  <p class="more-link"><a class="quiet" href="/projects/">← All projects</a></p>
+</Base>
