@@ -1,0 +1,67 @@
+---
+import fs from 'node:fs';
+import { imageSize } from 'image-size';
+import Base from '../../layouts/Base.astro';
+
+const shots = [
+  { src: '/images/projects/mr2u-import.webp', alt: 'MyRecipes2u turning a shared video into a structured recipe with time, serves, ingredients and steps' },
+  { src: '/images/projects/mr2u-cookbook.webp', alt: 'MyRecipes2u cookbook with imported recipes, photos and cuisine filters' },
+  { src: '/images/projects/mr2u-collections.webp', alt: 'MyRecipes2u collections — albums of recipes like Weeknight Dinners' },
+].map((s) => ({ ...s, ...imageSize(fs.readFileSync(`./public${s.src}`)) }));
+---
+<Base
+  title="MyRecipes2u"
+  description="Every recipe you love, in one place — share a Reel, TikTok or YouTube video and it becomes a clean, cookable recipe in your family's shared cookbook."
+>
+  <p class="eyebrow">iOS App</p>
+  <h1>MyRecipes2u</h1>
+  <p class="lede">
+    Every recipe you love, in one place. Share a Reel, TikTok or YouTube video
+    and it becomes a clean, cookable recipe — in a cookbook your whole family
+    shares.
+  </p>
+
+  <div class="cta-row">
+    <a class="btn" href="https://apps.apple.com/app/id6803501634">Download on the App Store</a>
+    <a class="btn secondary" href="https://myrecipes2u.com">myrecipes2u.com</a>
+  </div>
+
+  <section aria-labelledby="mr2u-shots">
+    <p class="eyebrow" id="mr2u-shots">On your phone</p>
+    <div class="shots">
+      {shots.map((s) => (
+        <img src={s.src} alt={s.alt} width={s.width} height={s.height} loading="lazy" decoding="async" />
+      ))}
+    </div>
+  </section>
+
+  <section aria-labelledby="mr2u-features">
+    <p class="eyebrow" id="mr2u-features">Features</p>
+    <div class="prose">
+      <ul>
+        <li>Share a cooking video from Instagram, TikTok or YouTube — it's read for you and lands as ingredients, steps and a photo</li>
+        <li>Import from any recipe website, a photo of a cookbook page, a handwritten card, or plain pasted text</li>
+        <li>One shared cookbook for the whole household — invite family with a simple code and see who added each dish</li>
+        <li>Collections for any occasion — Christmas dinner, meal prep, a trip to Italy — shareable with one link</li>
+        <li>Step-by-step cook mode with big type and built-in timers; scale servings and the ingredients follow</li>
+        <li>Personal notes on every recipe — "less chilli next time, use ghee not oil"</li>
+        <li>Grocery list built from what you're cooking this week</li>
+      </ul>
+    </div>
+  </section>
+
+  <section aria-labelledby="mr2u-pricing">
+    <p class="eyebrow" id="mr2u-pricing">Pricing</p>
+    <div class="prose">
+      <p>
+        Free to use: unlimited manual, photo, text and website imports, plus 10
+        video imports a month. Pro unlocks generous video importing for the
+        whole household with a single subscription — one family member
+        subscribes, everyone benefits.
+      </p>
+      <p>Requires iOS 17 or later.</p>
+    </div>
+  </section>
+
+  <p class="more-link"><a class="quiet" href="/projects/">← All projects</a></p>
+</Base>
